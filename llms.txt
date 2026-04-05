@@ -1,0 +1,48 @@
+# Nouri
+> Nouri is an AI-powered iOS calorie tracking app designed specifically for GLP-1 medication users (Ozempic, Wegovy, Mounjaro, Zepbound), halal food trackers, and FODMAP/IBS patients. It combines AI photo food scanning, injection tracking, side-effect correlation, halal verification, and adaptive calorie targets in one app.
+
+## Key Differentiators
+- Only app combining GLP-1 injection tracking + full calorie/macro tracking + AI food scanning
+- Halal ingredient verification built into every food scan
+- FODMAP classification with symptom-food AI correlation
+- Side-effect to food AI correlation (no competitor has this)
+- Adherence-neutral design: no shame, no red warnings, no guilt messaging
+- USDA FoodData Central cross-referencing for verified nutrition data
+
+## Features
+- AI photo food scanning with USDA verification
+- Barcode scanning (Open Food Facts + USDA dual database)
+- Voice food logging (English, Turkish, Arabic)
+- GLP-1 injection tracking with site rotation and drug level estimation
+- Side-effect logging with AI food-trigger correlation
+- Halal ingredient verification
+- FODMAP compliance tracking
+- Adaptive TDEE algorithm (Mifflin-St Jeor with weekly calibration)
+- 100 curated recipes (halal, GLP-1 friendly, FODMAP safe filters)
+- Weekly meal planning with auto grocery list
+- AI daily insights and weekly reports
+- Weight tracking with trend analysis
+- Water tracking with GLP-1 hydration awareness
+- HealthKit integration (steps, active calories, body mass)
+- Home screen widgets (calorie ring, water tracking)
+- Low-calorie protection (gentle, non-shaming alerts)
+
+## Supported Languages
+- English, Turkish, Arabic (full localization including recipes and AI insights)
+
+## Pricing
+- Monthly: $5.99/month (3-day free trial)
+- Annual: $39.99/year (7-day free trial) — best value
+- Lifetime: $89.99 one-time purchase
+- Free tier: 3 AI scans + unlimited manual logging
+
+## Technical Stack
+- Swift/SwiftUI, iOS 17+
+- Supabase (PostgreSQL, EU servers, Frankfurt)
+- OpenAI GPT-5.4 Nano for AI features
+- StoreKit 2 for subscriptions
+- HealthKit integration
+
+## Links
+- Website: https://nouriapp.health
+- Support: support@nouriapp.health
