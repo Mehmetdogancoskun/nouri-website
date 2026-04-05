@@ -84,31 +84,24 @@ nav.scrolled { box-shadow: 0 1px 24px rgba(0,0,0,0.04); }
 }
 .nav-center a:hover { color: var(--saffron); }
 .nav-right { display: flex; align-items: center; gap: 16px; }
-.lang-btn {
+.lang-bar {
+  display: flex; align-items: center;
   background: var(--linen); border: 1px solid var(--border);
-  padding: 6px 14px; border-radius: 20px;
-  font-size: 0.8rem; font-weight: 600;
-  color: var(--text-mid); cursor: pointer;
-  font-family: var(--sans); transition: all 0.2s;
+  border-radius: 24px; overflow: hidden;
 }
-.lang-btn:hover { border-color: var(--saffron); color: var(--saffron); }
-.lang-dropdown {
-  position: absolute; top: 100%; right: 0; margin-top: 8px;
-  background: white; border: 1px solid var(--border);
-  border-radius: var(--radius-sm); box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-  display: none; min-width: 140px; overflow: hidden; z-index: 100;
+.lang-opt {
+  padding: 7px 14px; font-size: 0.82rem; font-weight: 600;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-mid); font-family: var(--sans);
+  transition: all 0.25s; white-space: nowrap;
+  display: flex; align-items: center; gap: 5px;
 }
-.lang-dropdown.show { display: block; }
-.lang-dropdown button {
-  display: block; width: 100%; padding: 10px 16px;
-  text-align: left; border: none; background: none;
-  font-size: 0.88rem; font-family: var(--sans);
-  cursor: pointer; color: var(--text);
-  transition: background 0.15s;
+.lang-opt.active {
+  background: white; color: var(--saffron);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  border-radius: 20px;
 }
-html[dir="rtl"] .lang-dropdown button { text-align: right; }
-.lang-dropdown button:hover { background: var(--linen); }
-.lang-dropdown button.active { color: var(--saffron); font-weight: 600; }
+.lang-opt:hover:not(.active) { color: var(--saffron); }
 .nav-cta-btn {
   background: var(--saffron); color: white;
   padding: 8px 22px; border-radius: 24px;
@@ -228,7 +221,7 @@ section { padding: 100px 28px; }
 .step-num {
   width: 36px; height: 36px;
   display: inline-flex; align-items: center; justify-content: center;
-  background: var(--saffron-soft); color: var(--saffron);
+  background: var(--saffron); color: white;
   font-weight: 700; font-size: 0.85rem;
   border-radius: 10px; margin-bottom: 20px;
 }
@@ -427,6 +420,7 @@ footer {
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; }
   .hero-actions { flex-direction: column; }
+  .lang-opt { padding: 6px 10px; font-size: 0.76rem; }
   .nav-center.mob-open {
     display: flex; flex-direction: column;
     position: absolute; top: 100%; left: 0; right: 0;
@@ -435,6 +429,10 @@ footer {
     box-shadow: 0 8px 24px rgba(0,0,0,0.04);
   }
 }
+
+/* ═══ SCROLL REVEAL ═══ */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 
 <script type="application/ld+json">
@@ -454,13 +452,10 @@ footer {
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
     </div>
     <div class="nav-right">
-      <div style="position:relative">
-        <button class="lang-btn" id="langBtn">EN</button>
-        <div class="lang-dropdown" id="langDrop">
-          <button onclick="setLang('en')" class="active" id="langEn">English</button>
-          <button onclick="setLang('tr')" id="langTr">Türkçe</button>
-          <button onclick="setLang('ar')" id="langAr">العربية</button>
-        </div>
+      <div class="lang-bar">
+        <button class="lang-opt active" onclick="setLang('en')" id="langEn">🇬🇧 EN</button>
+        <button class="lang-opt" onclick="setLang('tr')" id="langTr">🇹🇷 TR</button>
+        <button class="lang-opt" onclick="setLang('ar')" id="langAr">🇸🇦 AR</button>
       </div>
       <a href="#download" class="nav-cta-btn" data-i18n="nav_download">Download</a>
     </div>
@@ -499,21 +494,21 @@ footer {
 <!-- HOW IT WORKS -->
 <section class="how" id="how">
   <div class="section-inner">
-    <p class="section-eyebrow" data-i18n="how_label">How It Works</p>
-    <h2 class="section-h2" data-i18n="how_title">Three steps. Real data. Zero stress.</h2>
-    <p class="section-p" data-i18n="how_desc">No data entry marathons. No guessing portion sizes. Just point, snap, and know.</p>
+    <p class="section-eyebrow reveal" data-i18n="how_label">How It Works</p>
+    <h2 class="section-h2 reveal" data-i18n="how_title">Three steps. Real data. Zero stress.</h2>
+    <p class="section-p reveal" data-i18n="how_desc">No data entry marathons. No guessing portion sizes. Just point, snap, and know.</p>
     <div class="how-steps">
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">1</div>
         <h3 data-i18n="how1_t">Snap or speak</h3>
         <p data-i18n="how1_p">Take a photo of your meal, scan a barcode, or just say what you ate. Nouri understands Turkish pilav, Arabic mansaf, and Japanese ramen equally well.</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">2</div>
         <h3 data-i18n="how2_t">Get real numbers</h3>
         <p data-i18n="how2_p">Every result is cross-checked against USDA's database of 380,000+ foods. Not AI guesses — real verified nutrition data. See something wrong? Fix it with inline search.</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">3</div>
         <h3 data-i18n="how3_t">Discover your patterns</h3>
         <p data-i18n="how3_p">AI connects what you eat to how you feel. Weekly reports show what's working. Targets adapt automatically as your body changes.</p>
@@ -525,18 +520,18 @@ footer {
 <!-- FEATURES -->
 <section class="features" id="features">
   <div class="section-inner">
-    <p class="section-eyebrow" data-i18n="feat_label">Features</p>
-    <h2 class="section-h2" data-i18n="feat_title">Everything you need, nothing you don't</h2>
-    <p class="section-p" data-i18n="feat_desc">Built by someone frustrated with every other calorie app. Designed for real lives, real food, real bodies.</p>
+    <p class="section-eyebrow reveal" data-i18n="feat_label">Features</p>
+    <h2 class="section-h2 reveal" data-i18n="feat_title">Everything you need, nothing you don't</h2>
+    <p class="section-p reveal" data-i18n="feat_desc">Built by someone frustrated with every other calorie app. Designed for real lives, real food, real bodies.</p>
     <div class="feat-grid">
-      <div class="feat"><div class="feat-icon fi-saffron">📷</div><h3 data-i18n="f1_t">AI Food Scanning</h3><p data-i18n="f1_p">Snap a photo, get macros instantly. Add hints like "lentil soup with bread" for even better accuracy. Works with any cuisine worldwide.</p></div>
-      <div class="feat"><div class="feat-icon fi-sage">🎤</div><h3 data-i18n="f2_t">Voice Logging</h3><p data-i18n="f2_p">"İki yumurta ve bir dilim ekmek yedim." Speak naturally in English, Turkish, or Arabic. Nouri does the rest.</p></div>
-      <div class="feat"><div class="feat-icon fi-clay">📊</div><h3 data-i18n="f3_t">Adaptive Targets</h3><p data-i18n="f3_p">Your calorie and macro goals recalibrate weekly based on real weight changes. Mifflin-St Jeor TDEE, calibrated by what's actually happening in your body.</p></div>
-      <div class="feat"><div class="feat-icon fi-olive">💡</div><h3 data-i18n="f4_t">AI Daily Insights</h3><p data-i18n="f4_p">Every evening: what you ate well, what you missed, and specific food suggestions for tomorrow. No generic praise — only practical advice.</p></div>
-      <div class="feat"><div class="feat-icon fi-saffron">🔍</div><h3 data-i18n="f5_t">Barcode Scanner</h3><p data-i18n="f5_p">Open Food Facts + USDA dual database. The widest barcode coverage of any scanner, including regional and international products.</p></div>
-      <div class="feat"><div class="feat-icon fi-sage">🍽️</div><h3 data-i18n="f6_t">100 Curated Recipes</h3><p data-i18n="f6_p">Full macro data, halal/GLP-1/FODMAP filters, weekly meal planning, and auto-generated grocery lists. All translated in three languages.</p></div>
-      <div class="feat"><div class="feat-icon fi-clay">⚖️</div><h3 data-i18n="f7_t">Weight Tracking</h3><p data-i18n="f7_p">Log manually or sync from Apple Health. Trend charts smooth out daily noise so you see real progress, not water weight panic.</p></div>
-      <div class="feat"><div class="feat-icon fi-olive">📱</div><h3 data-i18n="f8_t">Home Screen Widgets</h3><p data-i18n="f8_p">Calorie ring, macro progress, water tracking — glance at your day without opening the app. GLP-1 users see injection reminders too.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-saffron">📷</div><h3 data-i18n="f1_t">AI Food Scanning</h3><p data-i18n="f1_p">Snap a photo, get macros instantly. Add hints like "lentil soup with bread" for even better accuracy. Works with any cuisine worldwide.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-sage">🎤</div><h3 data-i18n="f2_t">Voice Logging</h3><p data-i18n="f2_p">"İki yumurta ve bir dilim ekmek yedim." Speak naturally in English, Turkish, or Arabic. Nouri does the rest.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-clay">📊</div><h3 data-i18n="f3_t">Adaptive Targets</h3><p data-i18n="f3_p">Your calorie and macro goals recalibrate weekly based on real weight changes. Mifflin-St Jeor TDEE, calibrated by what's actually happening in your body.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-olive">💡</div><h3 data-i18n="f4_t">AI Daily Insights</h3><p data-i18n="f4_p">Every evening: what you ate well, what you missed, and specific food suggestions for tomorrow. No generic praise — only practical advice.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-saffron">🔍</div><h3 data-i18n="f5_t">Barcode Scanner</h3><p data-i18n="f5_p">Open Food Facts + USDA dual database. The widest barcode coverage of any scanner, including regional and international products.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-sage">🍽️</div><h3 data-i18n="f6_t">100 Curated Recipes</h3><p data-i18n="f6_p">Full macro data, halal/GLP-1/FODMAP filters, weekly meal planning, and auto-generated grocery lists. All translated in three languages.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-clay">⚖️</div><h3 data-i18n="f7_t">Weight Tracking</h3><p data-i18n="f7_p">Log manually or sync from Apple Health. Trend charts smooth out daily noise so you see real progress, not water weight panic.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-olive">📱</div><h3 data-i18n="f8_t">Home Screen Widgets</h3><p data-i18n="f8_p">Calorie ring, macro progress, water tracking — glance at your day without opening the app. GLP-1 users see injection reminders too.</p></div>
     </div>
   </div>
 </section>
@@ -544,23 +539,23 @@ footer {
 <!-- MODES -->
 <section class="modes" id="modes">
   <div class="section-inner">
-    <p class="section-eyebrow" data-i18n="mode_label">Who It's For</p>
-    <h2 class="section-h2" data-i18n="mode_title">Three communities. One thoughtful app.</h2>
-    <p class="section-p" data-i18n="mode_desc">Nouri isn't trying to be everything for everyone. It's built specifically for people that every other app has ignored.</p>
+    <p class="section-eyebrow reveal" data-i18n="mode_label">Who It's For</p>
+    <h2 class="section-h2 reveal" data-i18n="mode_title">Three communities. One thoughtful app.</h2>
+    <p class="section-p reveal" data-i18n="mode_desc">Nouri isn't trying to be everything for everyone. It's built specifically for people that every other app has ignored.</p>
     <div class="modes-grid">
-      <div class="mode">
+      <div class="mode reveal">
         <span class="mode-icon">💉</span>
         <h3 data-i18n="m1_t">GLP-1 Medication Users</h3>
         <p data-i18n="m1_p">Injection tracking with site rotation. Drug level estimation. Side-effect-to-food AI correlation. Protein-first targets to prevent muscle loss. Gentle low-calorie protection when appetite disappears.</p>
         <span class="mode-badge mb-saffron" data-i18n="m1_b">Ozempic · Wegovy · Mounjaro · Zepbound</span>
       </div>
-      <div class="mode">
+      <div class="mode reveal">
         <span class="mode-icon">🌙</span>
         <h3 data-i18n="m2_t">Halal-Conscious Eaters</h3>
         <p data-i18n="m2_p">Every scanned food shows halal verification. Recipes are tagged and filtered. Ingredient lists are checked automatically. A nutrition app that finally respects your values.</p>
         <span class="mode-badge mb-sage" data-i18n="m2_b">Halal Verified Ingredients</span>
       </div>
-      <div class="mode">
+      <div class="mode reveal">
         <span class="mode-icon">🫧</span>
         <h3 data-i18n="m3_t">FODMAP & IBS Patients</h3>
         <p data-i18n="m3_p">Track symptoms alongside meals. AI identifies trigger foods over time. Recipes are FODMAP-classified. Practical swap suggestions when your usual choices cause problems.</p>
@@ -573,11 +568,11 @@ footer {
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="section-inner">
-    <p class="section-eyebrow" data-i18n="price_label">Pricing</p>
-    <h2 class="section-h2" data-i18n="price_title">Simple, fair pricing</h2>
-    <p class="section-p" data-i18n="price_desc">Start with a free trial. Keep it if you love it. Cancel anytime — no tricks, no dark patterns.</p>
+    <p class="section-eyebrow reveal" data-i18n="price_label">Pricing</p>
+    <h2 class="section-h2 reveal" data-i18n="price_title">Simple, fair pricing</h2>
+    <p class="section-p reveal" data-i18n="price_desc">Start with a free trial. Keep it if you love it. Cancel anytime — no tricks, no dark patterns.</p>
     <div class="price-grid">
-      <div class="price">
+      <div class="price reveal">
         <div class="price-name" data-i18n="p1_name">Monthly</div>
         <div class="price-amount">$5.99</div>
         <div class="price-period" data-i18n="p1_period">per month</div>
@@ -590,7 +585,7 @@ footer {
           <li data-i18n="pf_4">AI daily insights</li>
         </ul>
       </div>
-      <div class="price pop">
+      <div class="price pop reveal">
         <div class="price-pop-label" data-i18n="p2_badge">Best Value</div>
         <div class="price-name" data-i18n="p2_name">Yearly</div>
         <div class="price-amount">$39.99</div>
@@ -604,7 +599,7 @@ footer {
           <li data-i18n="pf_8">Early feature access</li>
         </ul>
       </div>
-      <div class="price">
+      <div class="price reveal">
         <div class="price-name" data-i18n="p3_name">Lifetime</div>
         <div class="price-amount">$89.99</div>
         <div class="price-period" data-i18n="p3_period">one-time</div>
@@ -624,23 +619,23 @@ footer {
 <!-- NUTRITION GUIDE -->
 <section class="guide" id="guide">
   <div class="section-inner">
-    <p class="section-eyebrow" data-i18n="guide_label">Nutrition Guide</p>
-    <h2 class="section-h2" data-i18n="guide_title">Knowledge built into every feature</h2>
-    <p class="section-p" data-i18n="guide_desc">We don't just track — we help you understand. Here's what we've learned building for these communities.</p>
+    <p class="section-eyebrow reveal" data-i18n="guide_label">Nutrition Guide</p>
+    <h2 class="section-h2 reveal" data-i18n="guide_title">Knowledge built into every feature</h2>
+    <p class="section-p reveal" data-i18n="guide_desc">We don't just track — we help you understand. Here's what we've learned building for these communities.</p>
     <div class="guide-grid">
-      <div class="guide-card">
+      <div class="guide-card reveal">
         <h3 data-i18n="g1_t">🥩 Protein on GLP-1: Why it's critical</h3>
         <p data-i18n="g1_p">GLP-1 medications suppress appetite, often causing inadequate protein intake and muscle loss. Aim for 1.2–1.8g per kg daily. At 70kg, that's 84–126g. Most users undershoot by 30–40% without tracking.</p>
       </div>
-      <div class="guide-card">
+      <div class="guide-card reveal">
         <h3 data-i18n="g2_t">💧 Hydration during GLP-1 treatment</h3>
         <p data-i18n="g2_p">Nausea and reduced appetite mean less water intake. Dehydration risks are real — especially the first 48 hours after injection. Aim for 2.5–3L daily. Nouri's GLP-1 mode increases your water target automatically.</p>
       </div>
-      <div class="guide-card">
+      <div class="guide-card reveal">
         <h3 data-i18n="g3_t">🌿 FODMAP basics: Finding your triggers</h3>
         <p data-i18n="g3_p">FODMAPs are fermentable carbs that cause bloating, gas, and pain. Common triggers: onion, garlic, wheat, certain fruits. Tracking meals alongside symptoms reveals your personal pattern within 2–3 weeks.</p>
       </div>
-      <div class="guide-card">
+      <div class="guide-card reveal">
         <h3 data-i18n="g4_t">☪️ Halal nutrition: Beyond the label</h3>
         <p data-i18n="g4_p">Halal isn't just about meat. Additives like gelatin, mono/diglycerides, and certain colorings can be non-halal. Nouri checks ingredient lists automatically — so you eat with full confidence.</p>
       </div>
@@ -651,15 +646,15 @@ footer {
 <!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="section-inner">
-    <p class="section-eyebrow" data-i18n="faq_label">FAQ</p>
-    <h2 class="section-h2" data-i18n="faq_title">Common questions</h2>
+    <p class="section-eyebrow reveal" data-i18n="faq_label">FAQ</p>
+    <h2 class="section-h2 reveal" data-i18n="faq_title">Common questions</h2>
     <div class="faq-list">
-      <div class="faq-item"><button class="faq-q" data-i18n="fq1">Is Nouri a medical app?</button><div class="faq-a" data-i18n="fa1">No. Nouri is a nutrition tracking tool — not a medical device. It doesn't diagnose, treat, or recommend medication changes. Always consult your healthcare provider about your treatment plan.</div></div>
-      <div class="faq-item"><button class="faq-q" data-i18n="fq2">How accurate is the AI scanning?</button><div class="faq-a" data-i18n="fa2">Nouri's AI identifies foods with high confidence, then cross-references every result with the USDA database. You can add hints for better accuracy and edit any result with inline search.</div></div>
-      <div class="faq-item"><button class="faq-q" data-i18n="fq3">What languages are supported?</button><div class="faq-a" data-i18n="fa3">Full localization in English, Turkish, and Arabic — including all 100 recipes, ingredient names, AI insights, and voice logging.</div></div>
-      <div class="faq-item"><button class="faq-q" data-i18n="fq4">Can I use it without GLP-1/halal/FODMAP?</button><div class="faq-a" data-i18n="fa4">Absolutely. Nouri works beautifully as a general calorie tracker. The specialized modes are optional toggles you can turn on or off anytime.</div></div>
-      <div class="faq-item"><button class="faq-q" data-i18n="fq5">Is my data private?</button><div class="faq-a" data-i18n="fa5">Yes. Data is stored on EU servers (Frankfurt). We never sell your data, never show ads, never share with third parties. We use no analytics SDKs or advertising trackers.</div></div>
-      <div class="faq-item"><button class="faq-q" data-i18n="fq6">What's in the free tier?</button><div class="faq-a" data-i18n="fa6">3 AI photo scans, unlimited manual logging, barcode scanning, and water tracking. Premium unlocks unlimited scans, voice logging, meal planning, and AI insights.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq1">Is Nouri a medical app?</button><div class="faq-a" data-i18n="fa1">No. Nouri is a nutrition tracking tool — not a medical device. It doesn't diagnose, treat, or recommend medication changes. Always consult your healthcare provider about your treatment plan.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq2">How accurate is the AI scanning?</button><div class="faq-a" data-i18n="fa2">Nouri's AI identifies foods with high confidence, then cross-references every result with the USDA database. You can add hints for better accuracy and edit any result with inline search.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq3">What languages are supported?</button><div class="faq-a" data-i18n="fa3">Full localization in English, Turkish, and Arabic — including all 100 recipes, ingredient names, AI insights, and voice logging.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq4">Can I use it without GLP-1/halal/FODMAP?</button><div class="faq-a" data-i18n="fa4">Absolutely. Nouri works beautifully as a general calorie tracker. The specialized modes are optional toggles you can turn on or off anytime.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq5">Is my data private?</button><div class="faq-a" data-i18n="fa5">Yes. Data is stored on EU servers (Frankfurt). We never sell your data, never show ads, never share with third parties. We use no analytics SDKs or advertising trackers.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq6">What's in the free tier?</button><div class="faq-a" data-i18n="fa6">3 AI photo scans, unlimited manual logging, barcode scanning, and water tracking. Premium unlocks unlimited scans, voice logging, meal planning, and AI insights.</div></div>
     </div>
   </div>
 </section>
@@ -852,24 +847,15 @@ function setLang(lang) {
     }
   });
 
-  // Update lang button
-  document.getElementById('langBtn').textContent = lang.toUpperCase();
-  document.querySelectorAll('.lang-dropdown button').forEach(b => b.classList.remove('active'));
+  // Update lang bar
+  document.querySelectorAll('.lang-opt').forEach(b => b.classList.remove('active'));
   document.getElementById('lang' + lang.charAt(0).toUpperCase() + lang.slice(1)).classList.add('active');
-  document.getElementById('langDrop').classList.remove('show');
 
   // Save preference
   try { localStorage.setItem('nouri-lang', lang); } catch(e) {}
 }
 
-// Lang dropdown toggle
-document.getElementById('langBtn').addEventListener('click', (e) => {
-  e.stopPropagation();
-  document.getElementById('langDrop').classList.toggle('show');
-});
-document.addEventListener('click', () => {
-  document.getElementById('langDrop').classList.remove('show');
-});
+
 
 // Nav scroll
 window.addEventListener('scroll', () => {
@@ -892,6 +878,12 @@ document.querySelectorAll('.nav-center a').forEach(a => {
   });
 });
 
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // Restore lang
 try {
   const saved = localStorage.getItem('nouri-lang');
