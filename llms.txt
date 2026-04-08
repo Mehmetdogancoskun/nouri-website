@@ -1,5 +1,5 @@
-# Nouri
-> Nouri is an AI-powered iOS calorie tracking app designed specifically for GLP-1 medication users (Ozempic, Wegovy, Mounjaro, Zepbound), halal food trackers, and FODMAP/IBS patients. It combines AI photo food scanning, injection tracking, side-effect correlation, halal verification, and adaptive calorie targets in one app.
+# CalJab
+> CalJab is an AI-powered iOS calorie tracking app designed specifically for GLP-1 medication users (Ozempic, Wegovy, Mounjaro, Zepbound), halal food trackers, and FODMAP/IBS patients. It combines AI photo food scanning, injection tracking, side-effect correlation, halal verification, and adaptive calorie targets in one app.
 
 ## Key Differentiators
 - Only app combining GLP-1 injection tracking + full calorie/macro tracking + AI food scanning
@@ -44,5 +44,5 @@
 - HealthKit integration
 
 ## Links
-- Website: https://nouriapp.health
-- Support: support@nouriapp.health
+- Website: https://caljab.app
+- Support: support@caljab.app
