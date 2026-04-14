@@ -1,0 +1,4 @@
+
+# Backup files (auto-generated, do not commit)
+*.backup-*
+index.html.backup*
