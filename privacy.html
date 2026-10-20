@@ -1,87 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — CalJab</title>
-<meta name="description" content="CalJab Privacy Policy. Learn how we handle your data.">
+<meta name="description" content="What CalJab collects and why, who it is shared with, and your rights.">
 <link rel="canonical" href="https://caljab.app/privacy.html">
+<link rel="alternate" hreflang="en" href="https://caljab.app/privacy.html">
+<link rel="alternate" hreflang="tr" href="https://caljab.app/privacy-tr.html">
+<link rel="alternate" hreflang="ar" href="https://caljab.app/privacy-ar.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--saffron:#E08A3C;--olive:#6B7F5E;--warm-white:#FAFAF7;--linen:#F0EDE7;--night-ink:#1A1A2E;--text:#2C2C2C;--text-sec:#6B7F5E;--border:rgba(107,127,94,0.12);}
+:root{--saffron:#E08A3C;--saffron-text:#9A5A1F;--olive:#6B7F5E;--warm-white:#FAFAF7;--linen:#F0EDE7;--night-ink:#1A1A2E;--text:#2C2C2C;--text-sec:#4A5640;--border:rgba(107,127,94,0.18);}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;}
-nav{background:var(--warm-white);border-bottom:1px solid var(--border);padding:16px 24px;}
-nav a{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--saffron);text-decoration:none;}
-.container{max-width:720px;margin:0 auto;padding:60px 24px 100px;}
-h1{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--night-ink);margin-bottom:8px;}
-.date{font-size:0.85rem;color:var(--olive);margin-bottom:40px;}
-h2{font-size:1.15rem;font-weight:700;color:var(--night-ink);margin:32px 0 12px;}
-p,li{font-size:0.95rem;color:var(--text-sec);line-height:1.75;margin-bottom:12px;}
-ul{padding-left:20px;margin-bottom:16px;}
-a{color:var(--saffron);}
-footer{padding:32px 24px;text-align:center;border-top:1px solid var(--border);font-size:0.8rem;color:var(--olive);}
-footer a{color:var(--saffron);text-decoration:none;margin:0 12px;}
+body{font-family:'DM Sans','Noto Sans Arabic',sans-serif;background:var(--warm-white);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;}
+html[dir=rtl] body{font-family:'Noto Sans Arabic','DM Sans',sans-serif;}
+nav{background:var(--warm-white);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+nav .brand{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--saffron);text-decoration:none;}
+.langs{display:flex;gap:6px;flex-wrap:wrap;}
+.langs a{font-size:0.85rem;color:var(--night-ink);text-decoration:none;padding:4px 10px;border-radius:999px;background:var(--linen);}
+.langs a[aria-current=true]{background:var(--night-ink);color:var(--warm-white);}
+.container{max-width:760px;margin:0 auto;padding:48px 20px 96px;}
+h1{font-family:'DM Serif Display','Noto Sans Arabic',serif;font-size:2rem;line-height:1.25;color:var(--night-ink);margin-bottom:8px;}
+html[dir=rtl] h1{font-family:'Noto Sans Arabic',sans-serif;font-weight:700;}
+.date{font-size:0.85rem;color:var(--olive);margin-bottom:32px;}
+h2{font-size:1.15rem;font-weight:700;color:var(--night-ink);margin:36px 0 12px;scroll-margin-top:16px;}
+p,li{font-size:0.97rem;color:var(--text-sec);line-height:1.75;margin-bottom:12px;}
+strong{color:var(--night-ink);}
+ul{padding-inline-start:20px;margin-bottom:16px;}
+a{color:var(--saffron-text);}
+.table-wrap{overflow-x:auto;margin:8px 0 20px;border:1px solid var(--border);border-radius:14px;background:#fff;}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:0.9rem;}
+th,td{text-align:start;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text-sec);line-height:1.55;}
+th{background:var(--linen);color:var(--night-ink);font-weight:600;}
+tr:last-child td{border-bottom:none;}
+footer{padding:32px 20px;text-align:center;border-top:1px solid var(--border);font-size:0.85rem;color:var(--olive);}
+footer a{color:var(--saffron-text);text-decoration:none;margin:0 10px;display:inline-block;padding:4px 0;}
 </style>
 </head>
 <body>
-<nav><a href="/">CalJab</a></nav>
-<div class="container">
+<nav><a class="brand" href="/">CalJab</a><div class="langs"><a href="privacy.html" hreflang="en" lang="en" aria-current="true">English</a><a href="privacy-tr.html" hreflang="tr" lang="tr">Türkçe</a><a href="privacy-ar.html" hreflang="ar" lang="ar">العربية</a></div></nav>
+<main class="container">
 <h1>Privacy Policy</h1>
-<p class="date">Last updated: April 5, 2026</p>
-
-<p>CalJab ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our iOS application.</p>
-
-<h2>1. Information We Collect</h2>
-<p><strong>Account Information:</strong> When you create an account, we collect your email address and a password (encrypted). Optionally, you may provide your name, age, gender, height, and weight to enable personalized calorie targets.</p>
-<p><strong>Nutrition Data:</strong> Food logs, meal photos (processed by AI and not permanently stored on our servers as images), water intake, weight entries, and related nutrition information you choose to log.</p>
-<p><strong>Health Data:</strong> If you grant permission, we read step count, active calories, and body mass from Apple HealthKit. We never write to HealthKit without your explicit action. We do not sell or share HealthKit data with third parties.</p>
-<p><strong>Medication Data:</strong> If you use GLP-1 tracking features, injection dates, sites, doses, and side effects are stored securely in your account.</p>
-<p><strong>Usage Data:</strong> Basic app events (e.g., feature usage counts) to improve the app. No advertising identifiers are collected.</p>
-
-<h2>2. How We Use Your Information</h2>
+<p class="date">Last updated: October 20, 2026</p>
+<p>What CalJab collects and why, who it is shared with, and your rights.</p>
+<h2>In short</h2>
+<p>CalJab is developed by Mehmet Doğan Coşkun, who is responsible for your data ("we", the data controller).</p>
 <ul>
-<li>To provide personalized calorie targets and nutrition insights</li>
-<li>To generate AI-powered daily summaries and weekly reports</li>
-<li>To enable food scanning, barcode lookup, and voice logging</li>
-<li>To sync your data across devices via your account</li>
-<li>To improve app functionality and fix bugs</li>
+<li>Your data is never sold and never used for advertising. The app has no ads and no third-party tracking tools.</li>
+<li>Your health and nutrition records are processed only with your explicit consent and are stored on servers in Germany, visible only to you.</li>
+<li>AI features work only with a separate permission. Only the photo or sentence you send goes to OpenAI.</li>
+<li>You can download your data from the app at any time, or delete it together with your account.</li>
+<li>Questions: support@caljab.app.</li>
 </ul>
-
-<h2>3. AI Processing</h2>
-<p>When you scan a food photo or use voice logging, the data is sent to our secure server (Supabase Edge Functions) which forwards it to OpenAI's API for processing. Photos are converted to analysis results and are not stored as images. AI-generated nutrition data is cached to reduce costs and improve speed.</p>
-
-<h2>4. Data Storage & Security</h2>
-<p>Your data is stored on Supabase servers located in Frankfurt, Germany (EU). All data is encrypted in transit (TLS) and at rest. Row-level security ensures you can only access your own data. We use no third-party analytics or advertising SDKs.</p>
-
-<h2>5. Third-Party Services</h2>
+<h2>Data we collect</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>What</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account</td>
+<td>Name, email, Apple user ID when you sign in with Apple, an encrypted hash of your password</td>
+<td>You and Apple</td>
+</tr>
+<tr>
+<td>Profile</td>
+<td>Birth year, sex, height, weight, goals, activity level, foods you dislike, your modes</td>
+<td>You; Apple Health if you allow it</td>
+</tr>
+<tr>
+<td>Health and nutrition</td>
+<td>Meals and meal photos, water, weight and body measurements, medication and dose records, symptoms</td>
+<td>You</td>
+</tr>
+<tr>
+<td>Plans and lists</td>
+<td>Meal plan, your own recipes, favorites, shopping list, shared list</td>
+<td>You</td>
+</tr>
+<tr>
+<td>Subscription</td>
+<td>Product, trial and renewal status; your payment details stay with Apple</td>
+<td>Apple</td>
+</tr>
+<tr>
+<td>Technical</td>
+<td>Crash and hang reports, app and iOS version, usage events (such as setup steps), AI usage count, server security logs (IP address)</td>
+<td>The app and our server, automatically</td>
+</tr>
+</tbody>
+</table></div>
+<p>Steps and active energy that we read from Apple Health stay on your phone. We never use Apple Health data for advertising and never share it. We do not collect the advertising identifier (IDFA).</p>
+<h2>How we use it and our legal basis</h2>
 <ul>
-<li><strong>Supabase</strong> (database & authentication) — EU servers, GDPR compliant</li>
-<li><strong>OpenAI</strong> (AI food analysis) — data processed per their API data usage policy; we send minimal data required</li>
-<li><strong>USDA FoodData Central</strong> (nutrition database) — public US government database</li>
-<li><strong>Open Food Facts</strong> (barcode database) — open-source community database</li>
-<li><strong>Apple StoreKit</strong> (subscriptions) — managed by Apple</li>
+<li><strong>Providing the service</strong> (account, sync, plans, lists, subscription): our contract with you (GDPR Art. 6(1)(b); KVKK Art. 5(2)(c)).</li>
+<li><strong>Processing your health and nutrition records</strong> (logging, goals, summaries, reminders, doctor report): your explicit consent (GDPR Art. 9(2)(a); KVKK Art. 6(2)). Your halal preference may reveal a belief, so it is covered by the same consent.</li>
+<li><strong>AI logging:</strong> your separate explicit consent.</li>
+<li><strong>Fixing bugs, improving the app and preventing abuse</strong> (crash reports, usage events, security logs): our legitimate interest (GDPR Art. 6(1)(f); KVKK Art. 5(2)(f)). This data contains no health information.</li>
+<li><strong>Legal obligations:</strong> where required.</li>
 </ul>
-
-<h2>6. Data Retention</h2>
-<p>Your data is retained as long as your account is active. You can delete your account and all associated data at any time by contacting us at support@caljab.app. Upon deletion, all personal data is permanently removed within 30 days.</p>
-
-<h2>7. Children's Privacy</h2>
-<p>CalJab is not intended for children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us.</p>
-
-<h2>8. Your Rights</h2>
-<p>You have the right to access, correct, or delete your personal data. You may also request a copy of your data in a portable format. Contact us at support@caljab.app to exercise these rights.</p>
-
-<h2>9. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
-
-<h2>10. Contact Us</h2>
-<p>If you have any questions about this Privacy Policy, please contact us at:<br>
-<strong>Email:</strong> <a href="mailto:support@caljab.app">support@caljab.app</a><br>
-<strong>Website:</strong> <a href="https://caljab.app">caljab.app</a></p>
-</div>
-<footer><a href="/">Home</a> <a href="/terms.html">Terms of Use</a> <span>© 2026 CalJab</span></footer>
+<p>Your goals are suggested by a calculation. We make no automated decision that has a legal or similarly significant effect on you, and you can change every goal.</p>
+<h2 id="ai">AI: what is sent and what is not</h2>
+<p>When you log with a photo, a menu, a recipe or by typing, the content goes through our server to OpenAI (USA). Foods and estimated nutrition values come back, and you confirm the entry.</p>
+<ul>
+<li><strong>Sent:</strong> the photo or sentence, any note you add, the app language.</li>
+<li><strong>Not sent:</strong> your name, email, account ID, medication and dose details, weight, modes, Apple Health data.</li>
+<li>OpenAI does not use this content to train its models and keeps it for at most 30 days for abuse monitoring.</li>
+<li>When you log by voice, Apple's speech recognition turns your speech into text; only the text, never the audio, goes to OpenAI.</li>
+<li>These features ask for a separate permission the first time you use them. You can turn it off in Me &gt; Privacy; logging by hand, by barcode and from lists keeps working.</li>
+<li>AI results are estimates and can be wrong.</li>
+</ul>
+<h2>Services we share with and where data is stored</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Purpose</th>
+<th>Receives</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supabase</td>
+<td>Database, sign-in, photo storage, server functions</td>
+<td>Account and record data</td>
+<td>Frankfurt, Germany</td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td>AI logging, only with your permission</td>
+<td>The content you send</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Apple</td>
+<td>App Store, subscription, Sign in with Apple, speech recognition</td>
+<td>Purchase and sign-in details; your speech when you log by voice</td>
+<td>Apple servers</td>
+</tr>
+<tr>
+<td>Open Food Facts</td>
+<td>Finding products by barcode</td>
+<td>The barcode number</td>
+<td>France</td>
+</tr>
+<tr>
+<td>USDA FoodData Central</td>
+<td>Nutrition search</td>
+<td>The food name you search for</td>
+<td>USA</td>
+</tr>
+</tbody>
+</table></div>
+<p>A person you invite to a shared list sees only that list. We may disclose data to authorities where the law requires it. When data is transferred outside the EU (to the USA), our data processing agreement with the provider and the EU Standard Contractual Clauses apply. We do not sell your data or share it with ad networks.</p>
+<h2>Retention, deletion and your rights</h2>
+<ul>
+<li>Your data is kept while your account is open. If you delete an entry, its photo is deleted with it.</li>
+<li>You can delete your account in Me &gt; Privacy &gt; Permissions and data. Your data is deleted immediately and drops out of daily backups within 7 days. If you withdraw your health consent, your health and nutrition records are deleted in the same way.</li>
+<li>Crash reports are kept for 90 days, usage events for 12 months and server security logs for at most 7 days. Content sent with AI stays with OpenAI for at most 30 days.</li>
+<li>Your rights: to access, correct and delete your data, to restrict or object to processing, to data portability (by downloading it in the app), and to withdraw your consent at any time. Withdrawing consent does not affect processing done before.</li>
+<li>To use them, write to support@caljab.app; we reply within 30 days. You may also complain to the data protection authority in your country.</li>
+<li>Users in Turkey also have the <a href="aydinlatma.html">KVKK information notice</a> (in Turkish).</li>
+</ul>
+<h2>Children, security, changes and contact</h2>
+<ul>
+<li><strong>Children:</strong> CalJab is not for anyone under 18; no account is created if the birth year at setup shows an age under 18. If we learn that someone under 18 has an account, we delete the account and its data.</li>
+<li><strong>Security:</strong> Connections are encrypted (TLS), data is stored on encrypted disks, and each user can reach only their own data. Meal photos sit in a folder only you can access. Medication names are hidden on the lock screen by default.</li>
+<li><strong>Changes:</strong> If we change this policy we update its date. We announce significant changes in the app, and ask for your consent again if its scope changes.</li>
+<li><strong>Contact:</strong> Mehmet Doğan Coşkun, Dubai, United Arab Emirates · support@caljab.app · caljab.app</li>
+</ul>
+</main>
+<footer><a href="/">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="consent.html">Consent</a><br>© 2026 CalJab</footer>
 </body>
 </html>
