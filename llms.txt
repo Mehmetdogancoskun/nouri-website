@@ -59,6 +59,9 @@ Short, sourced reads by the CalJab team; every sentence links to its source (med
 - [The three steps of FODMAP](https://caljab.app/guide/fodmap-three-steps/): What elimination, reintroduction and personalization mean, how long they take, and what to know before you start.
 - [Reading labels](https://caljab.app/guide/label-reading/): How to read an ingredients list, how to check halal certification, and how to spot FODMAP ingredients.
 - [Fasting in Ramadan on a GLP-1 medicine](https://caljab.app/guide/ramadan/): When to talk to your doctor, whether the injection breaks the fast, your dose, suhoor and iftar, and when to break the fast.
+- [Protecting your muscle](https://caljab.app/guide/muscle/): Why some muscle can go while you lose weight, who is at higher risk, and how strength training and protein help.
+- [When weight loss slows down](https://caljab.app/guide/plateau/): Why weight loss slows over time, why a plateau is not a reason to stop, and what can help.
+- [If you stop the medicine](https://caljab.app/guide/stopping/): What studies show happens to weight after stopping, why to plan it with your doctor, and the habits that matter.
 
 ## Links
 - Website: https://caljab.app
