@@ -43,6 +43,22 @@
 - StoreKit 2 for subscriptions
 - HealthKit integration
 
+## Guide
+Short, sourced reads by the CalJab team; every sentence links to its source (medicine leaflets, official health guidance, peer-reviewed papers). Also in Turkish (https://caljab.app/tr/rehber/) and Arabic (https://caljab.app/ar/guide/).
+- Index: https://caljab.app/guide/
+- [What to expect in the first month](https://caljab.app/guide/first-month/): How the medicine works, why the dose starts low, what can happen in the first weeks, and how to plan your injection day.
+- [Smaller portions](https://caljab.app/guide/small-portions/): Why you fill up sooner, how to set up your meals, and what helps while you eat.
+- [Fluids and electrolytes](https://caljab.app/guide/hydration/): Why they matter, how much to drink, what counts, and what to do if you are sick or have diarrhea.
+- [Nausea and vomiting](https://caljab.app/guide/nausea/): Why it happens, what may help, what to do if you are sick, and when to see a doctor.
+- [Constipation and diarrhea](https://caljab.app/guide/constipation-diarrhea/): What may help with constipation and diarrhea, where fiber comes from in FODMAP mode, and when to see a doctor.
+- [Reflux and bloating](https://caljab.app/guide/reflux-bloating/): What may help with heartburn, reflux, gas and bloating, and when to see a doctor.
+- [When to see a doctor](https://caljab.app/guide/when-to-see-doctor/): Which signs need emergency help, which need a doctor the same day, and which you should tell your doctor about.
+- [Contraception, pregnancy and breastfeeding](https://caljab.app/guide/pregnancy-contraception/): How long before a pregnancy to stop, what to know if you take the pill, and what to do if you are breastfeeding.
+- [Before surgery or anaesthesia](https://caljab.app/guide/surgery-anaesthesia/): Why to tell your team ahead, whether the medicine is stopped, who is at higher risk, and what your team may ask.
+- [Protein when your appetite is low](https://caljab.app/guide/protein-low-appetite/): Why protein matters, how much you need, where to get it when you eat less, and what else protects muscle.
+- [The three steps of FODMAP](https://caljab.app/guide/fodmap-three-steps/): What elimination, reintroduction and personalization mean, how long they take, and what to know before you start.
+- [Reading labels](https://caljab.app/guide/label-reading/): How to read an ingredients list, how to check halal certification, and how to spot FODMAP ingredients.
+
 ## Links
 - Website: https://caljab.app
 - Support: support@caljab.app

@@ -353,6 +353,12 @@ html[dir="rtl"] .guide-card { border-left: 1px solid var(--border); border-right
 .guide-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--night); margin-bottom: 10px; }
 .guide-card p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.75; }
 
+a.guide-card { display: block; text-decoration: none; color: inherit; }
+a.guide-card:hover h3 { color: var(--saffron); }
+.guide-min { display: block; margin-top: 10px; font-size: 0.78rem; color: var(--olive); }
+.guide-more { display: inline-block; margin-top: 28px; font-size: 0.92rem; font-weight: 600; color: var(--saffron); text-decoration: none; }
+.guide-more:hover { text-decoration: underline; }
+
 /* ═══════ FAQ ═══════ */
 .faq-section { background: var(--linen); }
 .faq-list { max-width: 680px; margin-top: 48px; }
@@ -640,24 +646,31 @@ footer {
     <p class="section-eyebrow reveal" data-i18n="guide_label">Nutrition Guide</p>
     <h2 class="section-h2 reveal" data-i18n="guide_title">Knowledge built into every feature</h2>
     <p class="section-p reveal" data-i18n="guide_desc">We don't just track — we help you understand. Here's what we've learned building for these communities.</p>
+    <!-- guide:start (tools/guide_web.py üretir) -->
     <div class="guide-grid">
-      <div class="guide-card reveal">
-        <h3 data-i18n="g1_t">🥩 Protein on GLP-1: Why it's critical</h3>
-        <p data-i18n="g1_p">GLP-1 medications suppress appetite, often causing inadequate protein intake and muscle loss. Aim for 1.2–1.8g per kg daily. At 70kg, that's 84–126g. Most users undershoot by 30–40% without tracking.</p>
-      </div>
-      <div class="guide-card reveal">
-        <h3 data-i18n="g2_t">💧 Hydration during GLP-1 treatment</h3>
-        <p data-i18n="g2_p">Nausea and reduced appetite mean less water intake. Dehydration risks are real — especially the first 48 hours after injection. Aim for 2.5–3L daily. CalJab's GLP-1 mode increases your water target automatically.</p>
-      </div>
-      <div class="guide-card reveal">
-        <h3 data-i18n="g3_t">🌿 FODMAP basics: Finding your triggers</h3>
-        <p data-i18n="g3_p">FODMAPs are fermentable carbs that cause bloating, gas, and pain. Common triggers: onion, garlic, wheat, certain fruits. Tracking meals alongside symptoms reveals your personal pattern within 2–3 weeks.</p>
-      </div>
-      <div class="guide-card reveal">
-        <h3 data-i18n="g4_t">☪️ Halal nutrition: Beyond the label</h3>
-        <p data-i18n="g4_p">Halal isn't just about meat. Additives like gelatin, mono/diglycerides, and certain colorings can be non-halal. CalJab checks ingredient lists automatically — so you eat with full confidence.</p>
-      </div>
+      <a class="guide-card reveal" href="/guide/protein-low-appetite/" data-href-en="/guide/protein-low-appetite/" data-href-tr="/tr/rehber/protein-low-appetite/" data-href-ar="/ar/guide/protein-low-appetite/">
+        <h3 data-i18n="g1_t">Protein when your appetite is low</h3>
+        <p data-i18n="g1_p">Why protein matters, how much you need, where to get it when you eat less, and what else protects muscle.</p>
+        <span class="guide-min" data-i18n="g1_m">3 min read</span>
+      </a>
+      <a class="guide-card reveal" href="/guide/nausea/" data-href-en="/guide/nausea/" data-href-tr="/tr/rehber/nausea/" data-href-ar="/ar/guide/nausea/">
+        <h3 data-i18n="g2_t">Nausea and vomiting</h3>
+        <p data-i18n="g2_p">Why it happens, what may help, what to do if you are sick, and when to see a doctor.</p>
+        <span class="guide-min" data-i18n="g2_m">3 min read</span>
+      </a>
+      <a class="guide-card reveal" href="/guide/fodmap-three-steps/" data-href-en="/guide/fodmap-three-steps/" data-href-tr="/tr/rehber/fodmap-three-steps/" data-href-ar="/ar/guide/fodmap-three-steps/">
+        <h3 data-i18n="g3_t">The three steps of FODMAP</h3>
+        <p data-i18n="g3_p">What elimination, reintroduction and personalization mean, how long they take, and what to know before you start.</p>
+        <span class="guide-min" data-i18n="g3_m">3 min read</span>
+      </a>
+      <a class="guide-card reveal" href="/guide/label-reading/" data-href-en="/guide/label-reading/" data-href-tr="/tr/rehber/label-reading/" data-href-ar="/ar/guide/label-reading/">
+        <h3 data-i18n="g4_t">Reading labels</h3>
+        <p data-i18n="g4_p">How to read an ingredients list, how to check halal certification, and how to spot FODMAP ingredients.</p>
+        <span class="guide-min" data-i18n="g4_m">3 min read</span>
+      </a>
     </div>
+    <a class="guide-more" href="/guide/" data-href-en="/guide/" data-href-tr="/tr/rehber/" data-href-ar="/ar/guide/" data-i18n="guide_all">All guide articles</a>
+    <!-- guide:end -->
   </div>
 </section>
 
@@ -734,11 +747,11 @@ const T = {
     p2_badge:"Best Value",p2_name:"Yearly",p2_price:"$39.99",p2_period:"per year",p2_save:"~$3.33/mo — save 44%",p2_trial:"7-day free trial",
     p3_name:"Lifetime",p3_price:"$89.99",p3_period:"one-time",p3_save:"Yours forever",p3_trial:"No subscription",
     pf_1:"Unlimited AI scans",pf_2:"Voice logging",pf_3:"Meal planning",pf_4:"AI daily insights",pf_5:"Everything in Monthly",pf_6:"Weekly AI reports",pf_7:"Priority support",pf_8:"Early feature access",pf_9:"Everything included",pf_10:"All future updates",pf_11:"Never pay again",pf_12:"Priority feature requests",
-    guide_label:"Nutrition Guide",guide_title:"Knowledge built into every feature",guide_desc:"We don't just track — we help you understand. Here's what we've learned building for these communities.",
-    g1_t:"🥩 Protein on GLP-1: Why it's critical",g1_p:"GLP-1 medications suppress appetite, often causing inadequate protein intake and muscle loss. Aim for 1.2–1.8g per kg daily. At 70kg, that's 84–126g. Most users undershoot by 30–40% without tracking.",
-    g2_t:"💧 Hydration during GLP-1 treatment",g2_p:"Nausea and reduced appetite mean less water intake. Dehydration risks are real — especially the first 48 hours after injection. Aim for 2.5–3L daily. CalJab's GLP-1 mode increases your water target automatically.",
-    g3_t:"🌿 FODMAP basics: Finding your triggers",g3_p:"FODMAPs are fermentable carbs that cause bloating, gas, and pain. Common triggers: onion, garlic, wheat, certain fruits. Tracking meals alongside symptoms reveals your personal pattern within 2–3 weeks.",
-    g4_t:"☪️ Halal nutrition: Beyond the label",g4_p:"Halal isn't just about meat. Additives like gelatin, mono/diglycerides, and certain colorings can be non-halal. CalJab checks ingredient lists automatically — so you eat with full confidence.",
+    guide_label:"Guide",guide_title:"Short reads, with sources",guide_desc:"Written by the CalJab team from medicine leaflets, official health guidance and peer-reviewed papers. Every sentence links to its source; none of it replaces your doctor's advice.",guide_all:"All guide articles",
+    g1_t:"Protein when your appetite is low",g1_p:"Why protein matters, how much you need, where to get it when you eat less, and what else protects muscle.",g1_m:"3 min read",
+    g2_t:"Nausea and vomiting",g2_p:"Why it happens, what may help, what to do if you are sick, and when to see a doctor.",g2_m:"3 min read",
+    g3_t:"The three steps of FODMAP",g3_p:"What elimination, reintroduction and personalization mean, how long they take, and what to know before you start.",g3_m:"3 min read",
+    g4_t:"Reading labels",g4_p:"How to read an ingredients list, how to check halal certification, and how to spot FODMAP ingredients.",g4_m:"3 min read",
     faq_label:"FAQ",faq_title:"Common questions",
     fq1:"Is CalJab a medical app?",fa1:"No. CalJab is a nutrition tracking tool — not a medical device. It doesn't diagnose, treat, or recommend medication changes. Always consult your healthcare provider about your treatment plan.",
     fq2:"How accurate is the AI scanning?",fa2:"CalJab's AI identifies foods with high confidence, then cross-references every result with the USDA database. You can add hints for better accuracy and edit any result with inline search.",
@@ -779,11 +792,11 @@ const T = {
     p2_badge:"En İyi Değer",p2_name:"Yıllık",p2_price:"₺499,99",p2_period:"yıllık",p2_save:"~₺41,67/ay — %58 tasarruf",p2_trial:"7 gün ücretsiz deneme",
     p3_name:"Ömür Boyu",p3_price:"₺1.499,99",p3_period:"tek seferlik",p3_save:"Sonsuza kadar senin",p3_trial:"Abonelik yok",
     pf_1:"Sınırsız AI tarama",pf_2:"Sesli giriş",pf_3:"Yemek planlama",pf_4:"AI günlük özetler",pf_5:"Aylık'taki her şey",pf_6:"Haftalık AI raporları",pf_7:"Öncelikli destek",pf_8:"Erken özellik erişimi",pf_9:"Her şey dahil",pf_10:"Tüm gelecek güncellemeler",pf_11:"Bir daha ödeme yok",pf_12:"Öncelikli özellik istekleri",
-    guide_label:"Beslenme Rehberi",guide_title:"Her özelliğe yerleştirilmiş bilgi",guide_desc:"Sadece takip etmiyoruz — anlamanıza yardımcı oluyoruz. Bu topluluklar için geliştirirken öğrendiklerimiz.",
-    g1_t:"🥩 GLP-1'de Protein: Neden kritik",g1_p:"GLP-1 ilaçları iştahı bastırır, genellikle yetersiz protein alımına ve kas kaybına yol açar. Günde kg başına 1.2–1.8g hedefleyin. 70kg'da bu 84–126g demek. Çoğu kullanıcı takip etmeden %30–40 eksik kalır.",
-    g2_t:"💧 GLP-1 tedavisinde hidrasyon",g2_p:"Bulantı ve azalan iştah daha az su içmek demek. Dehidrasyon riskleri gerçek — özellikle enjeksiyondan sonraki ilk 48 saat. Günde 2.5–3L hedefleyin. CalJab'nin GLP-1 modu su hedefinizi otomatik artırır.",
-    g3_t:"🌿 FODMAP temelleri: Tetikleyicilerinizi bulun",g3_p:"FODMAP'lar şişkinlik, gaz ve ağrıya neden olan fermente karbonhidratlardır. Yaygın tetikleyiciler: soğan, sarımsak, buğday, bazı meyveler. Semptomlarla birlikte yemek takibi 2–3 hafta içinde kişisel kalıbınızı ortaya çıkarır.",
-    g4_t:"☪️ Helal beslenme: Etiketin ötesinde",g4_p:"Helal sadece et meselesi değildir. Jelatin, mono/digliseritler ve bazı boyar maddeler helal olmayabilir. CalJab malzeme listelerini otomatik kontrol eder — böylece tam güvenle yersiniz.",
+    guide_label:"Rehber",guide_title:"Kısa yazılar, kaynaklarıyla",guide_desc:"CalJab ekibi ilaç prospektüslerinden, resmi sağlık rehberlerinden ve hakemli yayınlardan hazırladı. Her cümle kaynağına bağlı; hiçbiri doktor tavsiyesinin yerini tutmaz.",guide_all:"Tüm Rehber yazıları",
+    g1_t:"İştah azken protein",g1_p:"Protein neden önemli, ne kadar gerekir, az yerken nereden alınır, kası korumak için başka ne gerekir.",g1_m:"3 dk okuma",
+    g2_t:"Bulantı ve kusma",g2_p:"Neden olur, ne iyi gelebilir, kusunca ne yapılır, ne zaman doktora başvurulur.",g2_m:"3 dk okuma",
+    g3_t:"FODMAP'in üç aşaması",g3_p:"Eleme, geri ekleme ve kişiselleştirme ne demek, ne kadar sürer, başlamadan önce ne bilmeli.",g3_m:"3 dk okuma",
+    g4_t:"Etiket okuma",g4_p:"İçindekiler listesi nasıl okunur, helal belgesine nasıl bakılır, FODMAP içerikleri nasıl fark edilir.",g4_m:"3 dk okuma",
     faq_label:"SSS",faq_title:"Sık sorulan sorular",
     fq1:"CalJab tıbbi bir uygulama mı?",fa1:"Hayır. CalJab bir beslenme takip aracıdır — tıbbi cihaz değildir. Teşhis koymaz, tedavi önermez veya ilaç değişikliği tavsiye etmez. Tedavi planınız hakkında her zaman sağlık uzmanınıza danışın.",
     fq2:"AI tarama ne kadar doğru?",fa2:"CalJab'nin AI'ı yemekleri yüksek güvenle tanır, ardından her sonucu USDA veritabanıyla çapraz kontrol eder. Daha iyi doğruluk için ipuçları ekleyebilir ve satır içi aramayla her sonucu düzeltebilirsiniz.",
@@ -824,11 +837,11 @@ const T = {
     p2_badge:"أفضل قيمة",p2_name:"سنوي",p2_price:"$39.99",p2_period:"سنوياً",p2_save:"~$3.33/شهر — وفّر 44%",p2_trial:"7 أيام تجربة مجانية",
     p3_name:"مدى الحياة",p3_price:"$89.99",p3_period:"دفعة واحدة",p3_save:"ملكك للأبد",p3_trial:"بدون اشتراك",
     pf_1:"مسح ذكاء اصطناعي غير محدود",pf_2:"تسجيل صوتي",pf_3:"تخطيط وجبات",pf_4:"رؤى يومية بالذكاء الاصطناعي",pf_5:"كل شيء في الشهري",pf_6:"تقارير أسبوعية بالذكاء الاصطناعي",pf_7:"دعم أولوية",pf_8:"وصول مبكر للميزات",pf_9:"كل شيء مشمول",pf_10:"جميع التحديثات المستقبلية",pf_11:"لا تدفع مرة أخرى",pf_12:"طلبات ميزات ذات أولوية",
-    guide_label:"دليل التغذية",guide_title:"معرفة مدمجة في كل ميزة",guide_desc:"لا نتتبع فقط — نساعدك على الفهم. إليك ما تعلمناه أثناء البناء لهذه المجتمعات.",
-    g1_t:"🥩 البروتين مع GLP-1: لماذا هو حاسم",g1_p:"أدوية GLP-1 تثبط الشهية، مما يؤدي غالباً إلى نقص البروتين وفقدان العضلات. استهدف 1.2–1.8 جرام لكل كيلو يومياً. عند 70 كجم، هذا يعني 84–126 جرام. معظم المستخدمين ينقصهم 30–40% بدون تتبع.",
-    g2_t:"💧 الترطيب أثناء علاج GLP-1",g2_p:"الغثيان وانخفاض الشهية يعنيان شرب ماء أقل. مخاطر الجفاف حقيقية — خاصة أول 48 ساعة بعد الحقن. استهدف 2.5–3 لتر يومياً. وضع GLP-1 في كال جاب يزيد هدف الماء تلقائياً.",
-    g3_t:"🌿 أساسيات FODMAP: اكتشف محفزاتك",g3_p:"FODMAPs هي كربوهيدرات قابلة للتخمر تسبب الانتفاخ والغازات والألم. المحفزات الشائعة: البصل، الثوم، القمح، بعض الفواكه. تتبع الوجبات مع الأعراض يكشف نمطك الشخصي خلال 2–3 أسابيع.",
-    g4_t:"☪️ التغذية الحلال: أبعد من الملصق",g4_p:"الحلال ليس فقط عن اللحوم. المضافات مثل الجيلاتين والأحادي/ثنائي الجليسريد وبعض الملونات قد تكون غير حلال. كال جاب يفحص قوائم المكونات تلقائياً — لتأكل بثقة تامة.",
+    guide_label:"الدليل",guide_title:"قراءات قصيرة مع مصادرها",guide_desc:"أعدّها فريق CalJab من نشرات الأدوية والإرشادات الصحية الرسمية والأبحاث المحكّمة. كل جملة مرتبطة بمصدرها، ولا شيء منها يغني عن نصيحة الطبيب.",guide_all:"كل مقالات الدليل",
+    g1_t:"البروتين عند قلة الشهية",g1_p:"لماذا البروتين مهم، وكم تحتاج، ومن أين تحصل عليه عندما تأكل أقل، وما الذي يحمي العضلات أيضًا.",g1_m:"3 د للقراءة",
+    g2_t:"الغثيان والقيء",g2_p:"لماذا يحدث، وما الذي قد يساعد، وماذا تفعل إذا تقيأت، ومتى تراجع الطبيب.",g2_m:"3 د للقراءة",
+    g3_t:"مراحل FODMAP الثلاث",g3_p:"ماذا تعني مراحل الاستبعاد وإعادة الإدخال والتخصيص، وكم تستغرق، وما الذي يجب معرفته قبل البدء.",g3_m:"3 د للقراءة",
+    g4_t:"قراءة الملصق",g4_p:"كيف تقرأ قائمة المكونات، وكيف تتحقق من شهادة الحلال، وكيف تكتشف مكونات FODMAP.",g4_m:"3 د للقراءة",
     faq_label:"الأسئلة الشائعة",faq_title:"أسئلة شائعة",
     fq1:"هل كال جاب تطبيق طبي؟",fa1:"لا. كال جاب أداة لتتبع التغذية — ليس جهازاً طبياً. لا يشخص أو يعالج أو يوصي بتغيير الأدوية. استشر دائماً مقدم الرعاية الصحية حول خطة علاجك.",
     fq2:"ما مدى دقة المسح بالذكاء الاصطناعي؟",fa2:"ذكاء كال جاب الاصطناعي يتعرف على الأطعمة بثقة عالية، ثم يقارن كل نتيجة بقاعدة بيانات USDA. يمكنك إضافة تلميحات لدقة أفضل وتعديل أي نتيجة بالبحث المباشر.",
@@ -864,6 +877,9 @@ function setLang(lang) {
       }
     }
   });
+
+  // Rehber bağlantıları (tools/guide_web.py)
+  document.querySelectorAll('[data-href-' + lang + ']').forEach(a => { a.href = a.getAttribute('data-href-' + lang); });
 
   // Update lang bar
   document.querySelectorAll('.lang-opt').forEach(b => b.classList.remove('active'));
