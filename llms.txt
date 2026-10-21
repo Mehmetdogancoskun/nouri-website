@@ -47,6 +47,7 @@
 Short, sourced reads by the CalJab team; every sentence links to its source (medicine leaflets, official health guidance, peer-reviewed papers). Also in Turkish (https://caljab.app/tr/rehber/) and Arabic (https://caljab.app/ar/guide/).
 - Index: https://caljab.app/guide/
 - [What to expect in the first month](https://caljab.app/guide/first-month/): How the medicine works, why the dose starts low, what can happen in the first weeks, and how to plan your injection day.
+- [Storing your pen and travelling](https://caljab.app/guide/pen-storage/): How to store Wegovy and Mounjaro before and after first use, when a pen shouldn't be used, and what to plan when you travel.
 - [Smaller portions](https://caljab.app/guide/small-portions/): Why you fill up sooner, how to set up your meals, and what helps while you eat.
 - [Fluids and electrolytes](https://caljab.app/guide/hydration/): Why they matter, how much to drink, what counts, and what to do if you are sick or have diarrhea.
 - [Nausea and vomiting](https://caljab.app/guide/nausea/): Why it happens, what may help, what to do if you are sick, and when to see a doctor.
@@ -56,11 +57,17 @@ Short, sourced reads by the CalJab team; every sentence links to its source (med
 - [Contraception, pregnancy and breastfeeding](https://caljab.app/guide/pregnancy-contraception/): How long before a pregnancy to stop, what to know if you take the pill, and what to do if you are breastfeeding.
 - [Before surgery or anaesthesia](https://caljab.app/guide/surgery-anaesthesia/): Why to tell your team ahead, whether the medicine is stopped, who is at higher risk, and what your team may ask.
 - [Protein when your appetite is low](https://caljab.app/guide/protein-low-appetite/): Why protein matters, how much you need, where to get it when you eat less, and what else protects muscle.
+- [Getting enough fiber](https://caljab.app/guide/fiber/): Why fiber matters, how much to aim for, how to add it without upsetting your stomach, and where it comes from in FODMAP mode.
+- [Vitamins and minerals when you eat less](https://caljab.app/guide/vitamins-minerals/): Why eating much less can leave gaps, which nutrients to watch, where to find them, and when a supplement or a check-up makes sense.
+- [Eating out and at gatherings](https://caljab.app/guide/eating-out/): How to choose at a restaurant, what helps at the table, and what to do at weddings, buffets and parties.
+- [Alcohol and GLP-1 medicines](https://caljab.app/guide/alcohol/): Why alcohol can make side effects worse, how to keep the risk low if you drink, and which signs need a doctor.
 - [The three steps of FODMAP](https://caljab.app/guide/fodmap-three-steps/): What elimination, reintroduction and personalization mean, how long they take, and what to know before you start.
+- [Eating out on a low FODMAP diet](https://caljab.app/guide/fodmap-eating-out/): How to plan ahead, what to order and what to ask the kitchen so you can eat out on a low FODMAP diet.
 - [Reading labels](https://caljab.app/guide/label-reading/): How to read an ingredients list, how to check halal certification, and how to spot FODMAP ingredients.
 - [Fasting in Ramadan on a GLP-1 medicine](https://caljab.app/guide/ramadan/): When to talk to your doctor, whether the injection breaks the fast, your dose, suhoor and iftar, and when to break the fast.
 - [Protecting your muscle](https://caljab.app/guide/muscle/): Why some muscle can go while you lose weight, who is at higher risk, and how strength training and protein help.
 - [When weight loss slows down](https://caljab.app/guide/plateau/): Why weight loss slows over time, why a plateau is not a reason to stop, and what can help.
+- [Habits that help keep weight off](https://caljab.app/guide/maintenance-habits/): What people who keep weight off tend to do, and why it helps to build these habits while you're on the medicine.
 - [If you stop the medicine](https://caljab.app/guide/stopping/): What studies show happens to weight after stopping, why to plan it with your doctor, and the habits that matter.
 
 ## Links
