@@ -58,6 +58,7 @@ Short, sourced reads by the CalJab team; every sentence links to its source (med
 - [Protein when your appetite is low](https://caljab.app/guide/protein-low-appetite/): Why protein matters, how much you need, where to get it when you eat less, and what else protects muscle.
 - [The three steps of FODMAP](https://caljab.app/guide/fodmap-three-steps/): What elimination, reintroduction and personalization mean, how long they take, and what to know before you start.
 - [Reading labels](https://caljab.app/guide/label-reading/): How to read an ingredients list, how to check halal certification, and how to spot FODMAP ingredients.
+- [Fasting in Ramadan on a GLP-1 medicine](https://caljab.app/guide/ramadan/): When to talk to your doctor, whether the injection breaks the fast, your dose, suhoor and iftar, and when to break the fast.
 
 ## Links
 - Website: https://caljab.app
