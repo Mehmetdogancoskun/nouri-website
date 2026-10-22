@@ -1,47 +1,32 @@
 # CalJab
-> CalJab is an AI-powered iOS calorie tracking app designed specifically for GLP-1 medication users (Ozempic, Wegovy, Mounjaro, Zepbound), halal food trackers, and FODMAP/IBS patients. It combines AI photo food scanning, injection tracking, side-effect correlation, halal verification, and adaptive calorie targets in one app.
+> CalJab is an iOS food and medicine tracker for people on GLP-1 medicines (such as Ozempic, Wegovy, Mounjaro, Zepbound, Saxenda, Rybelsus and Trulicity), with optional halal and low FODMAP modes. It is available in English, Turkish and Arabic. CalJab is not a medical device; it does not give medical advice and does not suggest doses.
 
-## Key Differentiators
-- Only app combining GLP-1 injection tracking + full calorie/macro tracking + AI food scanning
-- Halal ingredient verification built into every food scan
-- FODMAP classification with symptom-food AI correlation
-- Side-effect to food AI correlation (no competitor has this)
-- Adherence-neutral design: no shame, no red warnings, no guilt messaging
-- USDA FoodData Central cross-referencing for verified nutrition data
+## What it does
+- Food logging: photo, one sentence or voice, barcode, search, and picks from a restaurant menu. Daily targets put protein first; for GLP-1 users energy is a lower limit, not a target to hit.
+- GLP-1 medicines: dose log with an injection site map and next-site suggestion, dose reminders, missed-dose guidance taken from each medicine's leaflet, and an estimated medicine level built from leaflet values (an estimate, not a measurement).
+- Symptoms: a short daily check-in and a symptom map.
+- Supplements and other medicines with reminders. The user enters the amount; the app does not suggest amounts.
+- Halal mode leaves out dishes that are not halal when it picks from a menu. It does not certify products as halal.
+- Low FODMAP mode shows the elimination, reintroduction and personalization steps, and menu picks leave out dishes estimated to be high in FODMAPs.
+- Meal plans, recipes and a shopping list.
+- Weight log, and a doctor report (PDF) with doses, weight, symptoms and eating.
+- Guide: short articles where every sentence links to its source (see below).
 
-## Features
-- AI photo food scanning with USDA verification
-- Barcode scanning (Open Food Facts + USDA dual database)
-- Voice food logging (English, Turkish, Arabic)
-- GLP-1 injection tracking with site rotation and drug level estimation
-- Side-effect logging with AI food-trigger correlation
-- Halal ingredient verification
-- FODMAP compliance tracking
-- Adaptive TDEE algorithm (Mifflin-St Jeor with weekly calibration)
-- 100 curated recipes (halal, GLP-1 friendly, FODMAP safe filters)
-- Weekly meal planning with auto grocery list
-- AI daily insights and weekly reports
-- Weight tracking with trend analysis
-- Water tracking with GLP-1 hydration awareness
-- HealthKit integration (steps, active calories, body mass)
-- Home screen widgets (calorie ring, water tracking)
-- Low-calorie protection (gentle, non-shaming alerts)
+## Free and Premium
+- Free: manual logging, dose tracking and reminders, the symptom map, safety information, plans and the Guide.
+- Premium (monthly, yearly or lifetime; current prices are shown in the App Store): unlimited meal photos, voice and one-sentence logging, AI lookup for any food, menu scanning, symptom patterns, dose and weight by week, and the doctor report.
 
-## Supported Languages
-- English, Turkish, Arabic (full localization including recipes and AI insights)
+## Privacy
+- Health data is used only with the user's consent, asked at sign-up. Withdrawing it in the app deletes health and food logs and meal photos; a download is offered first.
+- Data is stored with Supabase in the EU (Frankfurt).
+- AI features receive only the photo or the sentence, not the user's name, mode, medicine, dose or weight.
+- For adults 18 and over.
 
-## Pricing
-- Monthly: $5.99/month (3-day free trial)
-- Annual: $39.99/year (7-day free trial) — best value
-- Lifetime: $89.99 one-time purchase
-- Free tier: 3 AI scans + unlimited manual logging
-
-## Technical Stack
-- Swift/SwiftUI, iOS 17+
-- Supabase (PostgreSQL, EU servers, Frankfurt)
-- OpenAI GPT-5.4 Nano for AI features
+## Technical
+- Swift and SwiftUI, iOS 17 and later
+- Supabase (EU) for accounts and data
+- OpenAI models for AI logging
 - StoreKit 2 for subscriptions
-- HealthKit integration
 
 ## Guide
 Short, sourced reads by the CalJab team; every sentence links to its source (medicine leaflets, official health guidance, peer-reviewed papers). Also in Turkish (https://caljab.app/tr/rehber/) and Arabic (https://caljab.app/ar/guide/).
@@ -72,4 +57,6 @@ Short, sourced reads by the CalJab team; every sentence links to its source (med
 
 ## Links
 - Website: https://caljab.app
+- Privacy: https://caljab.app/privacy.html
+- Terms: https://caljab.app/terms.html
 - Support: support@caljab.app
