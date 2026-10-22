@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CalJab — AI Calorie Counter for GLP-1, Halal & FODMAP</title>
-<meta name="description" content="CalJab is an AI-powered iOS calorie tracking app designed for GLP-1 medication users (Ozempic, Wegovy, Mounjaro), halal food trackers, and FODMAP/IBS patients. Snap a photo, get USDA-verified nutrition data.">
-<meta name="keywords" content="calorie tracker, AI food scanner, GLP-1, Ozempic, Wegovy, Mounjaro, halal food tracker, FODMAP, IBS, nutrition app, protein tracking, injection tracker, halal calorie counter, FODMAP tracker">
-<meta property="og:title" content="CalJab — AI Calorie Counter for GLP-1, Halal & FODMAP">
-<meta property="og:description" content="The first AI calorie tracker built for GLP-1 medication users, halal food trackers, and FODMAP/IBS patients. USDA-verified. No ads. No shame.">
+<title>CalJab — Food and dose tracker for GLP-1, halal and low FODMAP</title>
+<meta name="description" content="CalJab is an iOS food and medicine tracker for people on GLP-1 medicines, with optional halal and low FODMAP modes. Log meals by photo, sentence or barcode, track doses and symptoms, and read sourced guides. In English, Turkish and Arabic.">
+<meta name="keywords" content="food tracker, GLP-1, Ozempic, Wegovy, Mounjaro, dose tracker, injection site, halal, low FODMAP, protein tracking, Turkish, Arabic">
+<meta property="og:title" content="CalJab — Food and dose tracker for GLP-1, halal and low FODMAP">
+<meta property="og:description" content="Log meals by photo, sentence or barcode, keep doses and symptoms in one place, and read guides where every sentence has a source. No ads.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://caljab.app">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://caljab.app/assets/og-image.jpg">
+<meta property="og:image" content="https://caljab.app/assets/og-image.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="CalJab — Nutrition tracking that actually gets you. For GLP-1, Halal, and FODMAP communities.">
+<meta property="og:image:alt" content="CalJab — Nutrition tracking that actually gets you. For GLP-1, halal and low FODMAP.">
 <meta property="og:site_name" content="CalJab">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="tr_TR">
 <meta property="og:locale:alternate" content="ar_SA">
-<meta name="twitter:title" content="CalJab — AI Calorie Counter for GLP-1, Halal & FODMAP">
-<meta name="twitter:description" content="The first AI calorie tracker built for GLP-1 medication users, halal food trackers, and FODMAP/IBS patients. USDA-verified. No ads. No shame.">
-<meta name="twitter:image" content="https://caljab.app/assets/twitter-image.jpg">
-<meta name="twitter:image:alt" content="CalJab — Nutrition tracking that actually gets you.">
+<meta name="twitter:title" content="CalJab — Food and dose tracker for GLP-1, halal and low FODMAP">
+<meta name="twitter:description" content="Log meals by photo, sentence or barcode, keep doses and symptoms in one place, and read guides where every sentence has a source. No ads.">
+<meta name="twitter:image" content="https://caljab.app/assets/twitter-image.jpg?v=2">
+<meta name="twitter:image:alt" content="CalJab — Nutrition tracking that actually gets you. For GLP-1, halal and low FODMAP.">
 <meta name="theme-color" content="#E08A3C">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -310,6 +310,8 @@ section { padding: 100px 28px; }
   transition: transform 0.3s;
   position: relative;
 }
+.price-grid.two { grid-template-columns: repeat(2,1fr); max-width: 880px; }
+.price.pop .price-amount { color: var(--saffron); }
 .price:hover { transform: translateY(-4px); }
 .price.pop { border-color: var(--saffron); }
 .price-pop-label {
@@ -437,7 +439,7 @@ footer {
   .nav-mobile { display: block; }
   .hero { padding: 130px 20px 60px; }
   .hero h1 { font-size: 2rem; }
-  .how-steps, .modes-grid, .price-grid { grid-template-columns: 1fr; }
+  .how-steps, .modes-grid, .price-grid, .price-grid.two { grid-template-columns: 1fr; }
   .feat-grid, .guide-grid { grid-template-columns: 1fr; }
   .trust-inner { gap: 16px; }
   .trust-item { font-size: 0.75rem; }
@@ -454,13 +456,18 @@ footer {
   }
 }
 
+@media (max-width: 480px) {
+  .nav-cta-btn { display: none; }
+  .nav-right { gap: 10px; }
+}
+
 /* ═══ SCROLL REVEAL ═══ */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MobileApplication","name":"CalJab","operatingSystem":"iOS","applicationCategory":"HealthApplication","description":"AI-powered calorie tracking app for GLP-1 medication users, halal food trackers, and FODMAP/IBS patients.","offers":{"@type":"Offer","price":"39.99","priceCurrency":"USD","category":"Annual Subscription"},"author":{"@type":"Organization","name":"CalJab","url":"https://caljab.app"},"inLanguage":["en","tr","ar"]}
+{"@context":"https://schema.org","@type":"MobileApplication","name":"CalJab","operatingSystem":"iOS","applicationCategory":"HealthApplication","description":"iOS food and medicine tracker for people on GLP-1 medicines, with optional halal and low FODMAP modes.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"CalJab","url":"https://caljab.app"},"inLanguage":["en","tr","ar"]}
 </script>
 </head>
 <body>
@@ -470,7 +477,7 @@ footer {
     <a href="/" class="nav-logo">CalJab</a>
     <div class="nav-center" id="navCenter">
       <a href="#features" data-i18n="nav_features">Features</a>
-      <a href="#modes" data-i18n="nav_who">Who It's For</a>
+      <a href="#modes" data-i18n="nav_who">Who it's for</a>
       <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
       <a href="#guide" data-i18n="nav_guide">Guide</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
@@ -491,9 +498,9 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <p class="hero-eyebrow" data-i18n="hero_eyebrow">AI-Powered Nutrition Tracking</p>
+  <p class="hero-eyebrow" data-i18n="hero_eyebrow">Food and medicine tracking</p>
   <h1 data-i18n="hero_title">Nutrition tracking that <span class="accent">actually gets you</span></h1>
-  <p class="hero-desc" data-i18n="hero_desc">Built for three communities mainstream calorie apps overlook — GLP-1 medication users, halal-conscious eaters, and FODMAP/IBS patients. Snap a photo, get USDA-verified data, and understand what works for your body.</p>
+  <p class="hero-desc" data-i18n="hero_desc">For people on GLP-1 medicines, people who eat halal and people on a low FODMAP diet. Log a meal with a photo, a sentence or a barcode, keep your doses and symptoms in one place, and read short guides where every sentence has a source.</p>
   <div class="hero-actions">
     <a href="https://apps.apple.com/app/caljab-shot-calorie-tracker/id6761846678" class="btn-primary" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -501,41 +508,41 @@ footer {
     </a>
     <a href="#features" class="btn-ghost" data-i18n="hero_learn">See what's inside →</a>
   </div>
-  <p class="hero-note" data-i18n="hero_note">Free to try · 7-day trial · No credit card upfront</p>
+  <p class="hero-note" data-i18n="hero_note">Free to download · Premium is optional · No ads</p>
 </section>
 
 <!-- TRUST -->
 <div class="trust">
   <div class="trust-inner">
-    <span class="trust-item">✅ <span data-i18n="trust_usda">USDA Verified</span></span>
-    <span class="trust-item">📸 <span data-i18n="trust_ai">AI Photo Scan</span></span>
-    <span class="trust-item">🔒 <span data-i18n="trust_privacy">Privacy First</span></span>
+    <span class="trust-item">📚 <span data-i18n="trust_1">Sourced guide</span></span>
+    <span class="trust-item">📸 <span data-i18n="trust_2">Photo, voice and barcode</span></span>
+    <span class="trust-item">🔒 <span data-i18n="trust_3">Data stored in the EU</span></span>
     <span class="trust-item">🌍 <span data-i18n="trust_lang">EN · TR · AR</span></span>
-    <span class="trust-item">🚫 <span data-i18n="trust_ads">No Ads</span></span>
+    <span class="trust-item">🚫 <span data-i18n="trust_ads">No ads</span></span>
   </div>
 </div>
 
 <!-- HOW IT WORKS -->
 <section class="how" id="how">
   <div class="section-inner">
-    <p class="section-eyebrow reveal" data-i18n="how_label">How It Works</p>
-    <h2 class="section-h2 reveal" data-i18n="how_title">Three steps. Real data. Zero stress.</h2>
-    <p class="section-p reveal" data-i18n="how_desc">No data entry marathons. No guessing portion sizes. Just point, snap, and know.</p>
+    <p class="section-eyebrow reveal" data-i18n="how_label">How it works</p>
+    <h2 class="section-h2 reveal" data-i18n="how_title">Log a meal in a few seconds</h2>
+    <p class="section-p reveal" data-i18n="how_desc">No long forms. Use whatever is easiest right now.</p>
     <div class="how-steps">
       <div class="step reveal">
         <div class="step-num">1</div>
-        <h3 data-i18n="how1_t">Snap or speak</h3>
-        <p data-i18n="how1_p">Take a photo of your meal, scan a barcode, or just say what you ate. CalJab understands Turkish pilav, Arabic mansaf, and Japanese ramen equally well.</p>
+        <h3 data-i18n="how1_t">Snap, say or scan</h3>
+        <p data-i18n="how1_p">Take a photo, say what you ate in English, Turkish or Arabic, or scan a barcode. Describe home dishes the way you would to a friend.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">2</div>
-        <h3 data-i18n="how2_t">Get real numbers</h3>
-        <p data-i18n="how2_p">Every result is cross-checked against USDA's database of 380,000+ foods. Not AI guesses — real verified nutrition data. See something wrong? Fix it with inline search.</p>
+        <h3 data-i18n="how2_t">Check and fix</h3>
+        <p data-i18n="how2_p">Results are estimates, so you see every item before saving. Change a portion, rename a dish, or swap in a food from USDA FoodData Central.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">3</div>
-        <h3 data-i18n="how3_t">Discover your patterns</h3>
-        <p data-i18n="how3_p">AI connects what you eat to how you feel. Weekly reports show what's working. Targets adapt automatically as your body changes.</p>
+        <h3 data-i18n="how3_t">See your day</h3>
+        <p data-i18n="how3_p">Today shows protein first, then fiber and water. If you take a GLP-1 medicine, your dose day and how you feel sit next to your meals.</p>
       </div>
     </div>
   </div>
@@ -545,17 +552,17 @@ footer {
 <section class="features" id="features">
   <div class="section-inner">
     <p class="section-eyebrow reveal" data-i18n="feat_label">Features</p>
-    <h2 class="section-h2 reveal" data-i18n="feat_title">Everything you need, nothing you don't</h2>
-    <p class="section-p reveal" data-i18n="feat_desc">Designed for communities that general calorie apps overlook. Real lives, real food, real bodies.</p>
+    <h2 class="section-h2 reveal" data-i18n="feat_title">What's inside</h2>
+    <p class="section-p reveal" data-i18n="feat_desc">Made for people whose day is about more than calories.</p>
     <div class="feat-grid">
-      <div class="feat reveal"><div class="feat-icon fi-saffron">📷</div><h3 data-i18n="f1_t">AI Food Scanning</h3><p data-i18n="f1_p">Snap a photo, get macros instantly. Add hints like "lentil soup with bread" for even better accuracy. Works with any cuisine worldwide.</p></div>
-      <div class="feat reveal"><div class="feat-icon fi-sage">🎤</div><h3 data-i18n="f2_t">Voice Logging</h3><p data-i18n="f2_p">"İki yumurta ve bir dilim ekmek yedim." Speak naturally in English, Turkish, or Arabic. CalJab does the rest.</p></div>
-      <div class="feat reveal"><div class="feat-icon fi-clay">📊</div><h3 data-i18n="f3_t">Adaptive Targets</h3><p data-i18n="f3_p">Your calorie and macro goals recalibrate weekly based on real weight changes. Mifflin-St Jeor TDEE, calibrated by what's actually happening in your body.</p></div>
-      <div class="feat reveal"><div class="feat-icon fi-olive">💡</div><h3 data-i18n="f4_t">AI Daily Insights</h3><p data-i18n="f4_p">Every evening: what you ate well, what you missed, and specific food suggestions for tomorrow. No generic praise — only practical advice.</p></div>
-      <div class="feat reveal"><div class="feat-icon fi-saffron">🔍</div><h3 data-i18n="f5_t">Barcode Scanner</h3><p data-i18n="f5_p">Open Food Facts + USDA dual database. The widest barcode coverage of any scanner, including regional and international products.</p></div>
-      <div class="feat reveal"><div class="feat-icon fi-sage">🍽️</div><h3 data-i18n="f6_t">250+ Curated Recipes</h3><p data-i18n="f6_p">Full macro data, halal/GLP-1/FODMAP filters, weekly meal planning, and auto-generated grocery lists. All translated in three languages.</p></div>
-      <div class="feat reveal"><div class="feat-icon fi-clay">⚖️</div><h3 data-i18n="f7_t">Weight Tracking</h3><p data-i18n="f7_p">Log manually or sync from Apple Health. Trend charts smooth out daily noise so you see real progress, not water weight panic.</p></div>
-      <div class="feat reveal"><div class="feat-icon fi-olive">📱</div><h3 data-i18n="f8_t">Home Screen Widgets</h3><p data-i18n="f8_p">Calorie ring, macro progress, water tracking — glance at your day without opening the app. GLP-1 users see injection reminders too.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-saffron">📷</div><h3 data-i18n="f1_t">Photo logging</h3><p data-i18n="f1_p">Snap your plate and CalJab lists each item with an estimate. You can undo a log for 5 seconds after saving.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-sage">🎤</div><h3 data-i18n="f2_t">Say it or type it</h3><p data-i18n="f2_p">“I had two eggs and a slice of bread.” One sentence in English, Turkish or Arabic is enough.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-clay">📊</div><h3 data-i18n="f3_t">Targets that fit</h3><p data-i18n="f3_p">Protein comes first. If you take a GLP-1 medicine, energy is a lower limit so you don't eat too little. Targets update when your weight changes, or you can set your own.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-olive">💊</div><h3 data-i18n="f4_t">Doses and symptoms</h3><p data-i18n="f4_p">Log doses on an injection site map, get a reminder on dose day, and see what to do if you miss one, based on official product information. A short check-in builds your symptom map.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-saffron">🔍</div><h3 data-i18n="f5_t">Barcode scanner</h3><p data-i18n="f5_p">Looks up packaged foods in Open Food Facts and USDA FoodData Central.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-sage">🍽️</div><h3 data-i18n="f6_t">Plans and a shopping list</h3><p data-i18n="f6_p">Plan the week with recipes that follow your modes. The shopping list fills from your plan, and you can share it.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-clay">⚖️</div><h3 data-i18n="f7_t">Weight</h3><p data-i18n="f7_p">Log your weight and see how it changes week by week. Weigh-ins can be saved to Apple Health.</p></div>
+      <div class="feat reveal"><div class="feat-icon fi-olive">📱</div><h3 data-i18n="f8_t">Home Screen widgets</h3><p data-i18n="f8_p">Your day, your next meal, water and your dose day, without opening the app.</p></div>
     </div>
   </div>
 </section>
@@ -563,27 +570,27 @@ footer {
 <!-- MODES -->
 <section class="modes" id="modes">
   <div class="section-inner">
-    <p class="section-eyebrow reveal" data-i18n="mode_label">Who It's For</p>
-    <h2 class="section-h2 reveal" data-i18n="mode_title">Three communities. One thoughtful app.</h2>
-    <p class="section-p reveal" data-i18n="mode_desc">CalJab isn't trying to be everything for everyone. It's built specifically for people that every other app has ignored.</p>
+    <p class="section-eyebrow reveal" data-i18n="mode_label">Who it's for</p>
+    <h2 class="section-h2 reveal" data-i18n="mode_title">Three modes. Pick any, or none.</h2>
+    <p class="section-p reveal" data-i18n="mode_desc">Modes are optional and you can change them later. Without them, CalJab is a simple food tracker.</p>
     <div class="modes-grid">
       <div class="mode reveal">
         <span class="mode-icon">💉</span>
-        <h3 data-i18n="m1_t">GLP-1 Medication Users</h3>
-        <p data-i18n="m1_p">Injection tracking with site rotation. Drug level estimation. Side-effect-to-food AI correlation. Protein-first targets to prevent muscle loss. Gentle low-calorie protection when appetite disappears.</p>
-        <span class="mode-badge mb-saffron" data-i18n="m1_b">Ozempic · Wegovy · Mounjaro · Zepbound</span>
+        <h3 data-i18n="m1_t">GLP-1 medicines</h3>
+        <p data-i18n="m1_p">A dose log with an injection site map and a next-site suggestion, dose-day reminders, missed-dose guidance from official product information, and an estimated medicine level. Protein comes first, and energy has a lower limit.</p>
+        <span class="mode-badge mb-saffron" data-i18n="m1_b">Ozempic · Wegovy · Mounjaro · and more</span>
       </div>
       <div class="mode reveal">
         <span class="mode-icon">🌙</span>
-        <h3 data-i18n="m2_t">Halal-Conscious Eaters</h3>
-        <p data-i18n="m2_p">Every scanned food shows halal verification. Recipes are tagged and filtered. Ingredient lists are checked automatically. A nutrition app that finally respects your values.</p>
-        <span class="mode-badge mb-sage" data-i18n="m2_b">Halal Verified Ingredients</span>
+        <h3 data-i18n="m2_t">Halal</h3>
+        <p data-i18n="m2_p">Meal plans leave out recipes that aren't halal, and menu picks leave out dishes that aren't. Photo results can show a halal note, which is an estimate. CalJab does not certify products; the Guide explains how to check a certificate.</p>
+        <span class="mode-badge mb-sage" data-i18n="m2_b">Halal mode</span>
       </div>
       <div class="mode reveal">
         <span class="mode-icon">🫧</span>
-        <h3 data-i18n="m3_t">FODMAP & IBS Patients</h3>
-        <p data-i18n="m3_p">Track symptoms alongside meals. AI identifies trigger foods over time. Recipes are FODMAP-classified. Practical swap suggestions when your usual choices cause problems.</p>
-        <span class="mode-badge mb-clay" data-i18n="m3_b">FODMAP Classified Foods</span>
+        <h3 data-i18n="m3_t">Low FODMAP</h3>
+        <p data-i18n="m3_p">Choose the step you're on: elimination, reintroduction or personal. Meal plans and menu picks leave out high FODMAP choices, and Premium shows links between your meals and how you feel.</p>
+        <span class="mode-badge mb-clay" data-i18n="m3_b">Low FODMAP mode</span>
       </div>
     </div>
   </div>
@@ -593,47 +600,35 @@ footer {
 <section class="pricing" id="pricing">
   <div class="section-inner">
     <p class="section-eyebrow reveal" data-i18n="price_label">Pricing</p>
-    <h2 class="section-h2 reveal" data-i18n="price_title">Simple, fair pricing</h2>
-    <p class="section-p reveal" data-i18n="price_desc">Start with a free trial. Keep it if you love it. Cancel anytime — no tricks, no dark patterns.</p>
-    <div class="price-grid">
+    <h2 class="section-h2 reveal" data-i18n="price_title">Free to start. Premium for more.</h2>
+    <p class="section-p reveal" data-i18n="price_desc">Dose tracking, reminders and safety information are always free. Premium adds AI logging without limits and deeper patterns.</p>
+    <div class="price-grid two">
       <div class="price reveal">
-        <div class="price-name" data-i18n="p1_name">Monthly</div>
-        <div class="price-amount" data-i18n="p1_price">$5.99</div>
-        <div class="price-period" data-i18n="p1_period">per month</div>
-        <div class="price-save">&nbsp;</div>
-        <div class="price-trial pt-sage" data-i18n="p1_trial">3-day free trial</div>
+        <div class="price-name" data-i18n="p1_name">Start here</div>
+        <div class="price-amount" data-i18n="p1_price">Free</div>
+        <div class="price-period" data-i18n="p1_period">No time limit</div>
+        <div class="price-trial pt-sage" data-i18n="p1_tag">A few AI logs to try</div>
         <ul class="price-list">
-          <li data-i18n="pf_1">Unlimited AI scans</li>
-          <li data-i18n="pf_2">Voice logging</li>
-          <li data-i18n="pf_3">Meal planning</li>
-          <li data-i18n="pf_4">AI daily insights</li>
+          <li data-i18n="pf_1">Manual logging, search and barcode</li>
+          <li data-i18n="pf_2">Dose tracking and reminders</li>
+          <li data-i18n="pf_3">Symptom map and safety information</li>
+          <li data-i18n="pf_4">Meal plans, recipes and shopping list</li>
+          <li data-i18n="pf_5">The Guide</li>
         </ul>
       </div>
       <div class="price pop reveal">
-        <div class="price-pop-label" data-i18n="p2_badge">Best Value</div>
-        <div class="price-name" data-i18n="p2_name">Yearly</div>
-        <div class="price-amount" data-i18n="p2_price">$39.99</div>
-        <div class="price-period" data-i18n="p2_period">per year</div>
-        <div class="price-save" data-i18n="p2_save">~$3.33/mo — save 44%</div>
-        <div class="price-trial pt-sage" data-i18n="p2_trial">7-day free trial</div>
+        <div class="price-name" data-i18n="p2_name">Go deeper</div>
+        <div class="price-amount" data-i18n="p2_price">Premium</div>
+        <div class="price-period" data-i18n="p2_period">Monthly, yearly or lifetime. Prices in your currency are shown in the App Store.</div>
+        <div class="price-trial pt-saffron" data-i18n="p2_tag">Cancel anytime in the App Store</div>
         <ul class="price-list">
-          <li data-i18n="pf_5">Everything in Monthly</li>
-          <li data-i18n="pf_6">Weekly AI reports</li>
-          <li data-i18n="pf_7">Priority support</li>
-          <li data-i18n="pf_8">Early feature access</li>
-        </ul>
-      </div>
-      <div class="price reveal">
-        <div class="price-name" data-i18n="p3_name">Lifetime</div>
-        <div class="price-amount" data-i18n="p3_price">$89.99</div>
-        <div class="price-period" data-i18n="p3_period">one-time</div>
-        <div class="price-save" data-i18n="p3_save">Yours forever</div>
-        <div class="price-trial pt-saffron" data-i18n="p3_trial">No subscription</div>
-        <ul class="price-list">
-          <li data-i18n="pf_9">Everything included</li>
-          <li data-i18n="pf_10">All future updates</li>
-          <li data-i18n="pf_11">Never pay again</li>
-          <li data-i18n="pf_12">Priority feature requests</li>
+          <li data-i18n="pf_6">Unlimited meal photos</li>
+          <li data-i18n="pf_7">Unlimited voice and one-sentence logging</li>
+          <li data-i18n="pf_8">AI lookup for any food, in any language</li>
+          <li data-i18n="pf_9">Menu scanning: three picks from any menu</li>
+          <li data-i18n="pf_10">Symptom patterns</li>
+          <li data-i18n="pf_11">Dose and weight by week</li>
+          <li data-i18n="pf_12">Doctor report as a PDF</li>
         </ul>
       </div>
     </div>
@@ -680,20 +675,21 @@ footer {
     <p class="section-eyebrow reveal" data-i18n="faq_label">FAQ</p>
     <h2 class="section-h2 reveal" data-i18n="faq_title">Common questions</h2>
     <div class="faq-list">
-      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq1">Is CalJab a medical app?</button><div class="faq-a" data-i18n="fa1">No. CalJab is a nutrition tracking tool — not a medical device. It doesn't diagnose, treat, or recommend medication changes. Always consult your healthcare provider about your treatment plan.</div></div>
-      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq2">How accurate is the AI scanning?</button><div class="faq-a" data-i18n="fa2">CalJab's AI identifies foods with high confidence, then cross-references every result with the USDA database. You can add hints for better accuracy and edit any result with inline search.</div></div>
-      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq3">What languages are supported?</button><div class="faq-a" data-i18n="fa3">Full localization in English, Turkish, and Arabic — including all 250+ recipes, ingredient names, AI insights, and voice logging.</div></div>
-      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq4">Can I use it without GLP-1/halal/FODMAP?</button><div class="faq-a" data-i18n="fa4">Absolutely. CalJab works beautifully as a general calorie tracker. The specialized modes are optional toggles you can turn on or off anytime.</div></div>
-      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq5">Is my data private?</button><div class="faq-a" data-i18n="fa5">Yes. Data is stored on EU servers (Frankfurt). We never sell your data, never show ads, never share with third parties. We use no analytics SDKs or advertising trackers.</div></div>
-      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq6">What's in the free tier?</button><div class="faq-a" data-i18n="fa6">3 AI photo scans, unlimited manual logging, barcode scanning, and water tracking. Premium unlocks unlimited scans, voice logging, meal planning, and AI insights.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq1">Is CalJab a medical app?</button><div class="faq-a" data-i18n="fa1">No. CalJab is a tracking tool, not a medical device. It does not diagnose, treat or suggest doses; it records the dose your doctor set. Talk to your doctor about your treatment.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq2">How accurate is photo logging?</button><div class="faq-a" data-i18n="fa2">Photo and sentence results are estimates. You see every item before saving and can change its portion or name, or replace it with a food from USDA FoodData Central.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq3">Which languages are there?</button><div class="faq-a" data-i18n="fa3">The app, the Guide and voice logging are in English, Turkish and Arabic. Arabic is shown right to left.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq4">Can I use it without GLP-1, halal or FODMAP?</button><div class="faq-a" data-i18n="fa4">Yes. Modes are optional, and you can turn them on or off later in the app.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq5">Is my data private?</button><div class="faq-a" data-i18n="fa5">Your data is stored in the EU (Frankfurt). Health data is used only with your consent; withdrawing it deletes your health and food logs and meal photos, and you can download them first. For AI features, only the photo or sentence goes to OpenAI, without your name, modes, medicines, doses or weight. No ads and no third-party analytics.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq6">What's in the free version?</button><div class="faq-a" data-i18n="fa6">Free: manual logging, search and barcode, dose tracking and reminders, the symptom map, safety information, meal plans, recipes, the shopping list and the Guide. Premium adds unlimited photo, voice and sentence logging, menu scanning, symptom patterns, dose and weight by week, and the doctor report.</div></div>
+      <div class="faq-item reveal"><button class="faq-q" data-i18n="fq7">Who can use CalJab?</button><div class="faq-a" data-i18n="fa7">Adults aged 18 and over.</div></div>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <div class="final-cta" id="download">
-  <h2 data-i18n="cta_title">Ready to track nutrition that fits your life?</h2>
-  <p data-i18n="cta_desc">Download CalJab free. Try premium for 7 days. Cancel anytime.</p>
+  <h2 data-i18n="cta_title">Try it with your next meal</h2>
+  <p data-i18n="cta_desc">Free to download. Premium is optional, and you can cancel it anytime in the App Store.</p>
   <a href="https://apps.apple.com/app/caljab-shot-calorie-tracker/id6761846678" class="btn-primary" target="_blank" rel="noopener">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
     <span data-i18n="cta_btn">Download on the App Store</span>
@@ -711,7 +707,7 @@ footer {
     </div>
     <div class="footer-bottom">
       <span>© 2026 CalJab.</span>
-      <p class="footer-disclaimer" data-i18n="foot_disc">CalJab is not medical advice. Always consult your healthcare provider. AI nutrition estimates are approximations.</p>
+      <p class="footer-disclaimer" data-i18n="foot_disc">CalJab is not a medical device and does not give medical advice. Food estimates are approximate. Ozempic, Wegovy, Mounjaro and other medicine names are trademarks of their owners.</p>
     </div>
   </div>
 </footer>
@@ -719,139 +715,70 @@ footer {
 <script>
 const T = {
   en: {
-    nav_features:"Features",nav_who:"Who It's For",nav_pricing:"Pricing",nav_guide:"Guide",nav_faq:"FAQ",nav_download:"Download",
-    hero_eyebrow:"AI-Powered Nutrition Tracking",
-    hero_title:'Nutrition tracking that <span class="accent">actually gets you</span>',
-    hero_desc:"Built for three communities mainstream calorie apps overlook — GLP-1 medication users, halal-conscious eaters, and FODMAP/IBS patients. Snap a photo, get USDA-verified data, and understand what works for your body.",
-    hero_cta:"Download on the App Store",hero_learn:"See what's inside →",hero_note:"Free to try · 7-day trial · No credit card upfront",
-    trust_usda:"USDA Verified",trust_ai:"AI Photo Scan",trust_privacy:"Privacy First",trust_lang:"EN · TR · AR",trust_ads:"No Ads",
-    how_label:"How It Works",how_title:"Three steps. Real data. Zero stress.",how_desc:"No data entry marathons. No guessing portion sizes. Just point, snap, and know.",
-    how1_t:"Snap or speak",how1_p:"Take a photo of your meal, scan a barcode, or just say what you ate. CalJab understands Turkish pilav, Arabic mansaf, and Japanese ramen equally well.",
-    how2_t:"Get real numbers",how2_p:"Every result is cross-checked against USDA's database of 380,000+ foods. Not AI guesses — real verified nutrition data. See something wrong? Fix it with inline search.",
-    how3_t:"Discover your patterns",how3_p:"AI connects what you eat to how you feel. Weekly reports show what's working. Targets adapt automatically as your body changes.",
-    feat_label:"Features",feat_title:"Everything you need, nothing you don't",feat_desc:"Designed for communities that general calorie apps overlook. Real lives, real food, real bodies.",
-    f1_t:"AI Food Scanning",f1_p:"Snap a photo, get macros instantly. Add hints like \"lentil soup with bread\" for even better accuracy. Works with any cuisine worldwide.",
-    f2_t:"Voice Logging",f2_p:"\"I had two eggs and toast with butter.\" Speak naturally in English, Turkish, or Arabic. CalJab does the rest.",
-    f3_t:"Adaptive Targets",f3_p:"Your calorie and macro goals recalibrate weekly based on real weight changes. Mifflin-St Jeor TDEE, calibrated by what's actually happening in your body.",
-    f4_t:"AI Daily Insights",f4_p:"Every evening: what you ate well, what you missed, and specific food suggestions for tomorrow. No generic praise — only practical advice.",
-    f5_t:"Barcode Scanner",f5_p:"Open Food Facts + USDA dual database. The widest barcode coverage of any scanner, including regional and international products.",
-    f6_t:"250+ Curated Recipes",f6_p:"Full macro data, halal/GLP-1/FODMAP filters, weekly meal planning, and auto-generated grocery lists. All translated in three languages.",
-    f7_t:"Weight Tracking",f7_p:"Log manually or sync from Apple Health. Trend charts smooth out daily noise so you see real progress, not water weight panic.",
-    f8_t:"Home Screen Widgets",f8_p:"Calorie ring, macro progress, water tracking — glance at your day without opening the app. GLP-1 users see injection reminders too.",
-    mode_label:"Who It's For",mode_title:"Three communities. One thoughtful app.",mode_desc:"CalJab isn't trying to be everything for everyone. It's built specifically for people that every other app has ignored.",
-    m1_t:"GLP-1 Medication Users",m1_p:"Injection tracking with site rotation. Drug level estimation. Side-effect-to-food AI correlation. Protein-first targets to prevent muscle loss. Gentle low-calorie protection when appetite disappears.",m1_b:"Ozempic · Wegovy · Mounjaro · Zepbound",
-    m2_t:"Halal-Conscious Eaters",m2_p:"Every scanned food shows halal verification. Recipes are tagged and filtered. Ingredient lists are checked automatically. A nutrition app that finally respects your values.",m2_b:"Halal Verified Ingredients",
-    m3_t:"FODMAP & IBS Patients",m3_p:"Track symptoms alongside meals. AI identifies trigger foods over time. Recipes are FODMAP-classified. Practical swap suggestions when your usual choices cause problems.",m3_b:"FODMAP Classified Foods",
-    price_label:"Pricing",price_title:"Simple, fair pricing",price_desc:"Start with a free trial. Keep it if you love it. Cancel anytime — no tricks, no dark patterns.",
-    p1_name:"Monthly",p1_price:"$5.99",p1_period:"per month",p1_trial:"3-day free trial",
-    p2_badge:"Best Value",p2_name:"Yearly",p2_price:"$39.99",p2_period:"per year",p2_save:"~$3.33/mo — save 44%",p2_trial:"7-day free trial",
-    p3_name:"Lifetime",p3_price:"$89.99",p3_period:"one-time",p3_save:"Yours forever",p3_trial:"No subscription",
-    pf_1:"Unlimited AI scans",pf_2:"Voice logging",pf_3:"Meal planning",pf_4:"AI daily insights",pf_5:"Everything in Monthly",pf_6:"Weekly AI reports",pf_7:"Priority support",pf_8:"Early feature access",pf_9:"Everything included",pf_10:"All future updates",pf_11:"Never pay again",pf_12:"Priority feature requests",
+    nav_features:"Features",nav_who:"Who it's for",nav_pricing:"Pricing",nav_guide:"Guide",nav_faq:"FAQ",nav_download:"Download",
+    hero_eyebrow:"Food and medicine tracking",hero_title:"Nutrition tracking that <span class=\"accent\">actually gets you</span>",hero_desc:"For people on GLP-1 medicines, people who eat halal and people on a low FODMAP diet. Log a meal with a photo, a sentence or a barcode, keep your doses and symptoms in one place, and read short guides where every sentence has a source.",hero_cta:"Download on the App Store",hero_learn:"See what's inside →",hero_note:"Free to download · Premium is optional · No ads",
+    trust_1:"Sourced guide",trust_2:"Photo, voice and barcode",trust_3:"Data stored in the EU",trust_lang:"EN · TR · AR",trust_ads:"No ads",
+    how_label:"How it works",how_title:"Log a meal in a few seconds",how_desc:"No long forms. Use whatever is easiest right now.",how1_t:"Snap, say or scan",how1_p:"Take a photo, say what you ate in English, Turkish or Arabic, or scan a barcode. Describe home dishes the way you would to a friend.",how2_t:"Check and fix",how2_p:"Results are estimates, so you see every item before saving. Change a portion, rename a dish, or swap in a food from USDA FoodData Central.",how3_t:"See your day",how3_p:"Today shows protein first, then fiber and water. If you take a GLP-1 medicine, your dose day and how you feel sit next to your meals.",
+    feat_label:"Features",feat_title:"What's inside",feat_desc:"Made for people whose day is about more than calories.",
+    f1_t:"Photo logging",f1_p:"Snap your plate and CalJab lists each item with an estimate. You can undo a log for 5 seconds after saving.",f2_t:"Say it or type it",f2_p:"“I had two eggs and a slice of bread.” One sentence in English, Turkish or Arabic is enough.",f3_t:"Targets that fit",f3_p:"Protein comes first. If you take a GLP-1 medicine, energy is a lower limit so you don't eat too little. Targets update when your weight changes, or you can set your own.",f4_t:"Doses and symptoms",f4_p:"Log doses on an injection site map, get a reminder on dose day, and see what to do if you miss one, based on official product information. A short check-in builds your symptom map.",f5_t:"Barcode scanner",f5_p:"Looks up packaged foods in Open Food Facts and USDA FoodData Central.",f6_t:"Plans and a shopping list",f6_p:"Plan the week with recipes that follow your modes. The shopping list fills from your plan, and you can share it.",f7_t:"Weight",f7_p:"Log your weight and see how it changes week by week. Weigh-ins can be saved to Apple Health.",f8_t:"Home Screen widgets",f8_p:"Your day, your next meal, water and your dose day, without opening the app.",
+    mode_label:"Who it's for",mode_title:"Three modes. Pick any, or none.",mode_desc:"Modes are optional and you can change them later. Without them, CalJab is a simple food tracker.",
+    m1_t:"GLP-1 medicines",m1_p:"A dose log with an injection site map and a next-site suggestion, dose-day reminders, missed-dose guidance from official product information, and an estimated medicine level. Protein comes first, and energy has a lower limit.",m1_b:"Ozempic · Wegovy · Mounjaro · and more",m2_t:"Halal",m2_p:"Meal plans leave out recipes that aren't halal, and menu picks leave out dishes that aren't. Photo results can show a halal note, which is an estimate. CalJab does not certify products; the Guide explains how to check a certificate.",m2_b:"Halal mode",m3_t:"Low FODMAP",m3_p:"Choose the step you're on: elimination, reintroduction or personal. Meal plans and menu picks leave out high FODMAP choices, and Premium shows links between your meals and how you feel.",m3_b:"Low FODMAP mode",
+    price_label:"Pricing",price_title:"Free to start. Premium for more.",price_desc:"Dose tracking, reminders and safety information are always free. Premium adds AI logging without limits and deeper patterns.",
+    p1_name:"Start here",p1_price:"Free",p1_period:"No time limit",p1_tag:"A few AI logs to try",p2_name:"Go deeper",p2_price:"Premium",p2_period:"Monthly, yearly or lifetime. Prices in your currency are shown in the App Store.",p2_tag:"Cancel anytime in the App Store",
+    pf_1:"Manual logging, search and barcode",pf_2:"Dose tracking and reminders",pf_3:"Symptom map and safety information",pf_4:"Meal plans, recipes and shopping list",pf_5:"The Guide",pf_6:"Unlimited meal photos",pf_7:"Unlimited voice and one-sentence logging",pf_8:"AI lookup for any food, in any language",pf_9:"Menu scanning: three picks from any menu",pf_10:"Symptom patterns",pf_11:"Dose and weight by week",pf_12:"Doctor report as a PDF",
     guide_label:"Guide",guide_title:"Short reads, with sources",guide_desc:"Written by the CalJab team from medicine leaflets, official health guidance and peer-reviewed papers. Every sentence links to its source; none of it replaces your doctor's advice.",guide_all:"All guide articles",
     g1_t:"Protein when your appetite is low",g1_p:"Why protein matters, how much you need, where to get it when you eat less, and what else protects muscle.",g1_m:"3 min read",
     g2_t:"Nausea and vomiting",g2_p:"Why it happens, what may help, what to do if you are sick, and when to see a doctor.",g2_m:"3 min read",
     g3_t:"The three steps of FODMAP",g3_p:"What elimination, reintroduction and personalization mean, how long they take, and what to know before you start.",g3_m:"3 min read",
     g4_t:"Reading labels",g4_p:"How to read an ingredients list, how to check halal certification, and how to spot FODMAP ingredients.",g4_m:"3 min read",
     faq_label:"FAQ",faq_title:"Common questions",
-    fq1:"Is CalJab a medical app?",fa1:"No. CalJab is a nutrition tracking tool — not a medical device. It doesn't diagnose, treat, or recommend medication changes. Always consult your healthcare provider about your treatment plan.",
-    fq2:"How accurate is the AI scanning?",fa2:"CalJab's AI identifies foods with high confidence, then cross-references every result with the USDA database. You can add hints for better accuracy and edit any result with inline search.",
-    fq3:"What languages are supported?",fa3:"Full localization in English, Turkish, and Arabic — including all 250+ recipes, ingredient names, AI insights, and voice logging.",
-    fq4:"Can I use it without GLP-1/halal/FODMAP?",fa4:"Absolutely. CalJab works beautifully as a general calorie tracker. The specialized modes are optional toggles you can turn on or off anytime.",
-    fq5:"Is my data private?",fa5:"Yes. Data is stored on EU servers (Frankfurt). We never sell your data, never show ads, never share with third parties. We use no analytics SDKs or advertising trackers.",
-    fq6:"What's in the free tier?",fa6:"3 AI photo scans, unlimited manual logging, barcode scanning, and water tracking. Premium unlocks unlimited scans, voice logging, meal planning, and AI insights.",
-    cta_title:"Ready to track nutrition that fits your life?",cta_desc:"Download CalJab free. Try premium for 7 days. Cancel anytime.",cta_btn:"Download on the App Store",
-    foot_privacy:"Privacy Policy",foot_terms:"Terms of Use",foot_contact:"Contact",
-    foot_disc:"CalJab is not medical advice. Always consult your healthcare provider. AI nutrition estimates are approximations."
+    fq1:"Is CalJab a medical app?",fa1:"No. CalJab is a tracking tool, not a medical device. It does not diagnose, treat or suggest doses; it records the dose your doctor set. Talk to your doctor about your treatment.",fq2:"How accurate is photo logging?",fa2:"Photo and sentence results are estimates. You see every item before saving and can change its portion or name, or replace it with a food from USDA FoodData Central.",fq3:"Which languages are there?",fa3:"The app, the Guide and voice logging are in English, Turkish and Arabic. Arabic is shown right to left.",fq4:"Can I use it without GLP-1, halal or FODMAP?",fa4:"Yes. Modes are optional, and you can turn them on or off later in the app.",fq5:"Is my data private?",fa5:"Your data is stored in the EU (Frankfurt). Health data is used only with your consent; withdrawing it deletes your health and food logs and meal photos, and you can download them first. For AI features, only the photo or sentence goes to OpenAI, without your name, modes, medicines, doses or weight. No ads and no third-party analytics.",fq6:"What's in the free version?",fa6:"Free: manual logging, search and barcode, dose tracking and reminders, the symptom map, safety information, meal plans, recipes, the shopping list and the Guide. Premium adds unlimited photo, voice and sentence logging, menu scanning, symptom patterns, dose and weight by week, and the doctor report.",fq7:"Who can use CalJab?",fa7:"Adults aged 18 and over.",
+    cta_title:"Try it with your next meal",cta_desc:"Free to download. Premium is optional, and you can cancel it anytime in the App Store.",cta_btn:"Download on the App Store",
+    foot_privacy:"Privacy Policy",foot_terms:"Terms of Use",foot_contact:"Contact",foot_disc:"CalJab is not a medical device and does not give medical advice. Food estimates are approximate. Ozempic, Wegovy, Mounjaro and other medicine names are trademarks of their owners."
   },
   tr: {
-    nav_features:"Özellikler",nav_who:"Kime Göre",nav_pricing:"Fiyatlar",nav_guide:"Rehber",nav_faq:"SSS",nav_download:"İndir",
-    hero_eyebrow:"Yapay Zeka Destekli Beslenme Takibi",
-    hero_title:'Seni gerçekten <span class="accent">anlayan</span> beslenme takibi',
-    hero_desc:"Yaygın kalori uygulamalarının gözden kaçırdığı üç topluluk için tasarlandı — GLP-1 ilaç kullanıcıları, helal bilinçli yemek yiyenler ve FODMAP/IBS hastaları. Fotoğraf çek, USDA doğrulanmış veri al, vücudun için neyin işe yaradığını anla.",
-    hero_cta:"App Store'dan İndir",hero_learn:"İçeriğe göz at →",hero_note:"Ücretsiz dene · 7 gün deneme · Kredi kartı gerekmez",
-    trust_usda:"USDA Doğrulanmış",trust_ai:"AI Fotoğraf Tarama",trust_privacy:"Gizlilik Öncelikli",trust_lang:"EN · TR · AR",trust_ads:"Reklam Yok",
-    how_label:"Nasıl Çalışır",how_title:"Üç adım. Gerçek veri. Sıfır stres.",how_desc:"Veri giriş maratonları yok. Porsiyon tahmini yok. Sadece çek, tara, öğren.",
-    how1_t:"Fotoğraf çek veya söyle",how1_p:"Yemeğinin fotoğrafını çek, barkod tara ya da ne yediğini söyle. CalJab Türk pilavını, Arap mansafını ve Japon ramen'ini eşit derecede iyi tanır.",
-    how2_t:"Gerçek rakamları gör",how2_p:"Her sonuç USDA'nın 380.000+ gıda veritabanıyla çapraz kontrol edilir. AI tahminleri değil — doğrulanmış besin verisi. Yanlış mı gördün? Satır içi aramayla düzelt.",
-    how3_t:"Kalıplarını keşfet",how3_p:"AI yediklerini nasıl hissettiğinle birleştirir. Haftalık raporlar neyin işe yaradığını gösterir. Hedefler vücudun değiştikçe otomatik ayarlanır.",
-    feat_label:"Özellikler",feat_title:"İhtiyacın olan her şey, gereksiz hiçbir şey",feat_desc:"Yaygın kalori uygulamalarının gözden kaçırdığı topluluklar için tasarlandı. Gerçek hayatlar, gerçek yemekler, gerçek bedenler.",
-    f1_t:"AI Yemek Tarama",f1_p:"Fotoğraf çek, makroları anında al. \"Mercimek çorbası ve ekmek\" gibi ipuçları ekleyerek doğruluğu artır. Dünya mutfaklarıyla çalışır.",
-    f2_t:"Sesli Giriş",f2_p:"\"İki yumurta ve bir dilim ekmek yedim.\" Türkçe, İngilizce veya Arapça doğal konuş. Gerisini CalJab halleder.",
-    f3_t:"Adaptif Hedefler",f3_p:"Kalori ve makro hedeflerin gerçek kilo değişimlerine göre haftalık olarak yeniden kalibre edilir. Mifflin-St Jeor TDEE, vücudunda gerçekte olanla kalibre edilir.",
-    f4_t:"AI Günlük Özetler",f4_p:"Her akşam: iyi yediklerin, kaçırdıkların ve yarın için spesifik yemek önerileri. Genel övgü yok — sadece pratik tavsiye.",
-    f5_t:"Barkod Tarayıcı",f5_p:"Open Food Facts + USDA çift veritabanı. Bölgesel ve uluslararası ürünler dahil en geniş barkod kapsamı.",
-    f6_t:"250+ Seçilmiş Tarif",f6_p:"Tam makro verisi, helal/GLP-1/FODMAP filtreleri, haftalık yemek planı ve otomatik alışveriş listesi. Üç dilde çevirilmiş.",
-    f7_t:"Kilo Takibi",f7_p:"Manuel giriş veya Apple Health senkronizasyonu. Trend grafikleri günlük gürültüyü yumuşatır — su kilosu paniği değil, gerçek ilerleme.",
-    f8_t:"Ana Ekran Widget'ları",f8_p:"Kalori halkası, makro ilerlemesi, su takibi — uygulamayı açmadan gününe göz at. GLP-1 kullanıcıları enjeksiyon hatırlatmalarını da görür.",
-    mode_label:"Kime Göre",mode_title:"Üç topluluk. Tek düşünceli uygulama.",mode_desc:"CalJab herkese her şeyi olmaya çalışmıyor. Diğer tüm uygulamaların görmezden geldiği insanlar için özel olarak yapıldı.",
-    m1_t:"GLP-1 İlaç Kullanıcıları",m1_p:"Bölge rotasyonlu enjeksiyon takibi. İlaç seviyesi tahmini. Yan etki-yemek AI korelasyonu. Kas kaybını önlemek için protein öncelikli hedefler. İştah kaybolduğunda nazik düşük kalori koruması.",m1_b:"Ozempic · Wegovy · Mounjaro · Zepbound",
-    m2_t:"Helal Bilinçli Beslenme",m2_p:"Taranan her yemek helal doğrulama durumunu gösterir. Tarifler etiketlenmiş ve filtrelenmiştir. Malzeme listeleri otomatik kontrol edilir. Değerlerinize nihayet saygı duyan bir beslenme uygulaması.",m2_b:"Helal Doğrulanmış Malzemeler",
-    m3_t:"FODMAP ve IBS Hastaları",m3_p:"Yemeklerle birlikte semptomları takip edin. AI zamanla tetikleyici gıdaları belirler. Tarifler FODMAP sınıflandırılmıştır. Her zamanki seçimleriniz sorun çıkardığında pratik değiştirme önerileri.",m3_b:"FODMAP Sınıflandırılmış Gıdalar",
-    price_label:"Fiyatlar",price_title:"Basit ve adil fiyatlandırma",price_desc:"Ücretsiz denemeyle başla. Beğenirsen devam et. İstediğin zaman iptal et — numara yok, karanlık kalıp yok.",
-    p1_name:"Aylık",p1_price:"₺99,99",p1_period:"aylık",p1_trial:"3 gün ücretsiz deneme",
-    p2_badge:"En İyi Değer",p2_name:"Yıllık",p2_price:"₺499,99",p2_period:"yıllık",p2_save:"~₺41,67/ay — %58 tasarruf",p2_trial:"7 gün ücretsiz deneme",
-    p3_name:"Ömür Boyu",p3_price:"₺1.499,99",p3_period:"tek seferlik",p3_save:"Sonsuza kadar senin",p3_trial:"Abonelik yok",
-    pf_1:"Sınırsız AI tarama",pf_2:"Sesli giriş",pf_3:"Yemek planlama",pf_4:"AI günlük özetler",pf_5:"Aylık'taki her şey",pf_6:"Haftalık AI raporları",pf_7:"Öncelikli destek",pf_8:"Erken özellik erişimi",pf_9:"Her şey dahil",pf_10:"Tüm gelecek güncellemeler",pf_11:"Bir daha ödeme yok",pf_12:"Öncelikli özellik istekleri",
+    nav_features:"Özellikler",nav_who:"Kimler için",nav_pricing:"Fiyatlar",nav_guide:"Rehber",nav_faq:"SSS",nav_download:"İndir",
+    hero_eyebrow:"Yemek ve ilaç takibi",hero_title:"Seni gerçekten <span class=\"accent\">anlayan</span> beslenme takibi",hero_desc:"GLP-1 ilacı kullananlar, helal beslenenler ve düşük FODMAP diyeti yapanlar için. Öğününü fotoğrafla, bir cümleyle ya da barkodla kaydet; dozlarını ve belirtilerini tek yerde tut; her cümlesi kaynağına bağlı kısa rehberleri oku.",hero_cta:"App Store'dan İndir",hero_learn:"İçeriğe göz at →",hero_note:"Ücretsiz indir · Premium isteğe bağlı · Reklam yok",
+    trust_1:"Kaynaklı rehber",trust_2:"Fotoğraf, ses ve barkod",trust_3:"Veriler AB'de saklanır",trust_lang:"EN · TR · AR",trust_ads:"Reklam yok",
+    how_label:"Nasıl çalışır",how_title:"Bir öğünü birkaç saniyede kaydet",how_desc:"Uzun formlar yok. O an hangisi kolaysa onu kullan.",how1_t:"Çek, söyle ya da tara",how1_p:"Fotoğraf çek, ne yediğini Türkçe, İngilizce ya da Arapça söyle veya barkodu tara. Ev yemeklerini bir arkadaşına anlatır gibi anlat.",how2_t:"Kontrol et, düzelt",how2_p:"Sonuçlar tahmindir; bu yüzden kaydetmeden önce her kalemi görürsün. Porsiyonu değiştir, yemeğin adını düzelt ya da USDA FoodData Central'dan bir yiyecekle değiştir.",how3_t:"Gününü gör",how3_p:"Bugün ekranı önce proteini, sonra lifi ve suyu gösterir. GLP-1 ilacı kullanıyorsan doz günün ve nasıl hissettiğin öğünlerinin yanında durur.",
+    feat_label:"Özellikler",feat_title:"İçinde neler var",feat_desc:"Günü kaloriden ibaret olmayanlar için yapıldı.",
+    f1_t:"Fotoğrafla kayıt",f1_p:"Tabağının fotoğrafını çek; CalJab her kalemi bir tahminle listeler. Kaydettikten sonra 5 saniye içinde geri alabilirsin.",f2_t:"Söyle ya da yaz",f2_p:"“İki yumurta ve bir dilim ekmek yedim.” Türkçe, İngilizce ya da Arapça tek bir cümle yeter.",f3_t:"Sana uyan hedefler",f3_p:"Protein önce gelir. GLP-1 ilacı kullanıyorsan enerji bir alt sınırdır; böylece çok az yemezsin. Hedefler kilon değişince güncellenir, istersen kendin belirlersin.",f4_t:"Dozlar ve belirtiler",f4_p:"Dozunu enjeksiyon bölgesi haritasında kaydet, doz gününde hatırlatma al, doz kaçarsa resmi ürün bilgisine göre ne yapacağını gör. Kısa bir “Nasılsın” kaydı belirti haritanı oluşturur.",f5_t:"Barkod tarayıcı",f5_p:"Paketli ürünleri Open Food Facts ve USDA FoodData Central'da arar.",f6_t:"Plan ve alışveriş listesi",f6_p:"Haftanı modlarına uyan tariflerle planla. Alışveriş listesi plandan dolar ve paylaşabilirsin.",f7_t:"Kilo",f7_p:"Kilonu kaydet, haftadan haftaya nasıl değiştiğini gör. Tartılarını Apple Sağlık'a da kaydedebilirsin.",f8_t:"Ana ekran widget'ları",f8_p:"Günün, sıradaki öğünün, suyun ve doz günün; uygulamayı açmadan.",
+    mode_label:"Kimler için",mode_title:"Üç mod. İstediğini seç ya da hiçbirini.",mode_desc:"Modlar isteğe bağlı ve sonra değiştirebilirsin. Mod seçmezsen CalJab sade bir yemek takipçisidir.",
+    m1_t:"GLP-1 ilaçları",m1_p:"Enjeksiyon bölgesi haritalı ve sıradaki bölgeyi öneren doz kaydı, doz günü hatırlatması, resmi ürün bilgisine göre kaçan doz bilgisi ve tahmini ilaç düzeyi. Protein önce gelir, enerjinin bir alt sınırı vardır.",m1_b:"Ozempic · Wegovy · Mounjaro · ve diğerleri",m2_t:"Helal",m2_p:"Yemek planı helal olmayan tarifleri, menüden seçim helal olmayan yemekleri dışarıda bırakır. Fotoğraf sonuçlarında helal notu çıkabilir; bu bir tahmindir. CalJab ürünlere helal belgesi vermez; belgeye nasıl bakılacağını Rehber anlatır.",m2_b:"Helal mod",m3_t:"Düşük FODMAP",m3_p:"Hangi aşamada olduğunu seç: eleme, geri ekleme ya da kişisel. Yemek planı ve menüden seçim yüksek FODMAP'li seçenekleri dışarıda bırakır; Premium öğünlerinle nasıl hissettiğin arasındaki bağları gösterir.",m3_b:"Düşük FODMAP modu",
+    price_label:"Fiyatlar",price_title:"Başlamak ücretsiz. Daha fazlası Premium'da.",price_desc:"Doz takibi, hatırlatmalar ve güvenlik bilgileri her zaman ücretsiz. Premium sınırsız yapay zekâ kaydı ve daha derin örüntüler ekler.",
+    p1_name:"Buradan başla",p1_price:"Ücretsiz",p1_period:"Süre sınırı yok",p1_tag:"Denemek için birkaç yapay zekâ kaydı",p2_name:"Daha derine",p2_price:"Premium",p2_period:"Aylık, yıllık ya da ömür boyu. Kendi para biriminde fiyatlar App Store'da görünür.",p2_tag:"App Store'dan istediğin zaman iptal et",
+    pf_1:"Elle kayıt, arama ve barkod",pf_2:"Doz takibi ve hatırlatmalar",pf_3:"Belirti haritası ve güvenlik bilgileri",pf_4:"Yemek planı, tarifler ve alışveriş listesi",pf_5:"Rehber",pf_6:"Sınırsız öğün fotoğrafı",pf_7:"Sınırsız sesli ve tek cümleyle kayıt",pf_8:"Her yiyeceği her dilde yapay zekâyla bulma",pf_9:"Menü tarama: her menüden üç seçim",pf_10:"Belirti örüntüleri",pf_11:"Haftalara göre doz ve kilo",pf_12:"PDF doktor raporu",
     guide_label:"Rehber",guide_title:"Kısa yazılar, kaynaklarıyla",guide_desc:"CalJab ekibi ilaç prospektüslerinden, resmi sağlık rehberlerinden ve hakemli yayınlardan hazırladı. Her cümle kaynağına bağlı; hiçbiri doktor tavsiyesinin yerini tutmaz.",guide_all:"Tüm Rehber yazıları",
     g1_t:"İştah azken protein",g1_p:"Protein neden önemli, ne kadar gerekir, az yerken nereden alınır, kası korumak için başka ne gerekir.",g1_m:"3 dk okuma",
     g2_t:"Bulantı ve kusma",g2_p:"Neden olur, ne iyi gelebilir, kusunca ne yapılır, ne zaman doktora başvurulur.",g2_m:"3 dk okuma",
     g3_t:"FODMAP'in üç aşaması",g3_p:"Eleme, geri ekleme ve kişiselleştirme ne demek, ne kadar sürer, başlamadan önce ne bilmeli.",g3_m:"3 dk okuma",
     g4_t:"Etiket okuma",g4_p:"İçindekiler listesi nasıl okunur, helal belgesine nasıl bakılır, FODMAP içerikleri nasıl fark edilir.",g4_m:"3 dk okuma",
     faq_label:"SSS",faq_title:"Sık sorulan sorular",
-    fq1:"CalJab tıbbi bir uygulama mı?",fa1:"Hayır. CalJab bir beslenme takip aracıdır — tıbbi cihaz değildir. Teşhis koymaz, tedavi önermez veya ilaç değişikliği tavsiye etmez. Tedavi planınız hakkında her zaman sağlık uzmanınıza danışın.",
-    fq2:"AI tarama ne kadar doğru?",fa2:"CalJab'nin AI'ı yemekleri yüksek güvenle tanır, ardından her sonucu USDA veritabanıyla çapraz kontrol eder. Daha iyi doğruluk için ipuçları ekleyebilir ve satır içi aramayla her sonucu düzeltebilirsiniz.",
-    fq3:"Hangi diller destekleniyor?",fa3:"İngilizce, Türkçe ve Arapça'da tam lokalizasyon — tüm 250+ tarif, malzeme adları, AI özetleri ve sesli giriş dahil.",
-    fq4:"GLP-1/helal/FODMAP olmadan kullanabilir miyim?",fa4:"Kesinlikle. CalJab genel kalori takipçisi olarak harika çalışır. Özel modlar istediğiniz zaman açıp kapatabileceğiniz isteğe bağlı geçişlerdir.",
-    fq5:"Verilerim gizli mi?",fa5:"Evet. Veriler AB sunucularında (Frankfurt) saklanır. Verilerinizi asla satmayız, reklam göstermeyiz, üçüncü taraflarla paylaşmayız. Analitik SDK veya reklam izleyici kullanmayız.",
-    fq6:"Ücretsiz katmanda ne var?",fa6:"3 AI fotoğraf tarama, sınırsız manuel giriş, barkod tarama ve su takibi. Premium, sınırsız tarama, sesli giriş, yemek planı ve AI özetlerinin kilidini açar.",
-    cta_title:"Hayatına uyan beslenme takibine hazır mısın?",cta_desc:"CalJab'yi ücretsiz indir. Premium'u 7 gün dene. İstediğin zaman iptal et.",cta_btn:"App Store'dan İndir",
-    foot_privacy:"Gizlilik Politikası",foot_terms:"Kullanım Koşulları",foot_contact:"İletişim",
-    foot_disc:"CalJab tıbbi tavsiye değildir. Her zaman sağlık uzmanınıza danışın. AI beslenme tahminleri yaklaşık değerlerdir."
+    fq1:"CalJab tıbbi bir uygulama mı?",fa1:"Hayır. CalJab bir takip aracıdır, tıbbi cihaz değildir. Teşhis koymaz, tedavi etmez, doz önermez; doktorunun belirlediği dozu kaydeder. Tedavin için doktorunla konuş.",fq2:"Fotoğrafla kayıt ne kadar doğru?",fa2:"Fotoğraf ve cümle sonuçları tahmindir. Kaydetmeden önce her kalemi görür, porsiyonunu ya da adını değiştirebilir veya USDA FoodData Central'dan bir yiyecekle değiştirebilirsin.",fq3:"Hangi diller var?",fa3:"Uygulama, Rehber ve sesli kayıt Türkçe, İngilizce ve Arapça. Arapça sağdan sola gösterilir.",fq4:"GLP-1, helal ya da FODMAP olmadan kullanabilir miyim?",fa4:"Evet. Modlar isteğe bağlı; uygulamada sonradan açıp kapatabilirsin.",fq5:"Verilerim güvende mi?",fa5:"Verilerin AB'de (Frankfurt) saklanır. Sağlık verilerin yalnız onayınla kullanılır; onayı geri alırsan sağlık ve yemek kayıtların ile öğün fotoğrafların silinir, önce indirebilirsin. Yapay zekâ özelliklerinde OpenAI'a yalnız fotoğraf ya da cümle gider; adın, modların, ilaçların, dozların ve kilon gitmez. Reklam ve üçüncü taraf analitik yok.",fq6:"Ücretsiz sürümde neler var?",fa6:"Ücretsiz: elle kayıt, arama ve barkod, doz takibi ve hatırlatmalar, belirti haritası, güvenlik bilgileri, yemek planı, tarifler, alışveriş listesi ve Rehber. Premium sınırsız fotoğraf, ses ve cümleyle kayıt, menü tarama, belirti örüntüleri, haftalara göre doz ve kilo ile doktor raporunu ekler.",fq7:"CalJab'ı kimler kullanabilir?",fa7:"18 yaş ve üstü yetişkinler.",
+    cta_title:"Bir sonraki öğününde dene",cta_desc:"Ücretsiz indir. Premium isteğe bağlı; App Store'dan istediğin zaman iptal edebilirsin.",cta_btn:"App Store'dan İndir",
+    foot_privacy:"Gizlilik Politikası",foot_terms:"Kullanım Koşulları",foot_contact:"İletişim",foot_disc:"CalJab tıbbi cihaz değildir ve tıbbi tavsiye vermez. Yemek tahminleri yaklaşıktır. Ozempic, Wegovy, Mounjaro ve diğer ilaç adları sahiplerinin markalarıdır."
   },
   ar: {
-    nav_features:"المميزات",nav_who:"لمن",nav_pricing:"الأسعار",nav_guide:"دليل",nav_faq:"الأسئلة",nav_download:"تحميل",
-    hero_eyebrow:"تتبع التغذية بالذكاء الاصطناعي",
-    hero_title:'تتبع تغذية <span class="accent">يفهمك حقاً</span>',
-    hero_desc:"مصمم لثلاثة مجتمعات تتجاهلها تطبيقات السعرات السائدة — مستخدمو أدوية GLP-1، المهتمون بالطعام الحلال، ومرضى FODMAP/القولون العصبي. التقط صورة، واحصل على بيانات غذائية موثقة من USDA.",
-    hero_cta:"حمّل من App Store",hero_learn:"← اكتشف المزيد",hero_note:"تجربة مجانية · 7 أيام · بدون بطاقة ائتمان",
-    trust_usda:"بيانات USDA موثقة",trust_ai:"مسح بالذكاء الاصطناعي",trust_privacy:"الخصوصية أولاً",trust_lang:"EN · TR · AR",trust_ads:"بدون إعلانات",
-    how_label:"كيف يعمل",how_title:"ثلاث خطوات. بيانات حقيقية. بدون توتر.",how_desc:"بدون إدخال بيانات مرهق. بدون تخمين الحصص. فقط صوّر، امسح، واعرف.",
-    how1_t:"صوّر أو تكلّم",how1_p:"التقط صورة لوجبتك، امسح باركود، أو قل ما أكلت. كال جاب يفهم البرياني والمنسف والرامن بنفس الدقة.",
-    how2_t:"احصل على أرقام حقيقية",how2_p:"كل نتيجة تُقارن بقاعدة بيانات USDA التي تضم أكثر من 380,000 غذاء. ليست تخمينات — بيانات تغذية موثقة. رأيت خطأ؟ أصلحه بالبحث المباشر.",
-    how3_t:"اكتشف أنماطك",how3_p:"الذكاء الاصطناعي يربط ما تأكله بشعورك. التقارير الأسبوعية تُظهر ما ينجح. الأهداف تتكيف تلقائياً مع تغير جسمك.",
-    feat_label:"المميزات",feat_title:"كل ما تحتاجه، بدون ما لا تحتاجه",feat_desc:"مصمم للمجتمعات التي تتجاهلها تطبيقات السعرات العامة. حياة حقيقية، طعام حقيقي، أجسام حقيقية.",
-    f1_t:"مسح الطعام بالذكاء الاصطناعي",f1_p:"التقط صورة واحصل على الماكرو فوراً. أضف تلميحات مثل \"شوربة عدس مع خبز\" لدقة أفضل. يعمل مع أي مطبخ عالمي.",
-    f2_t:"التسجيل الصوتي",f2_p:"\"أكلت بيضتين وقطعة خبز محمص بالزبدة.\" تحدث بشكل طبيعي بالعربية أو الإنجليزية أو التركية. كال جاب يتولى الباقي.",
-    f3_t:"أهداف تكيفية",f3_p:"أهداف السعرات والماكرو تُعاد معايرتها أسبوعياً بناءً على تغيرات الوزن الفعلية. حساب TDEE بطريقة Mifflin-St Jeor، معاير بما يحدث فعلياً في جسمك.",
-    f4_t:"رؤى يومية بالذكاء الاصطناعي",f4_p:"كل مساء: ما أكلته جيداً، ما فاتك، واقتراحات طعام محددة للغد. بدون مدح عام — فقط نصائح عملية.",
-    f5_t:"ماسح الباركود",f5_p:"قاعدتا بيانات Open Food Facts + USDA. أوسع تغطية باركود من أي ماسح، بما في ذلك المنتجات الإقليمية والدولية.",
-    f6_t:"250+ وصفة مختارة",f6_p:"بيانات ماكرو كاملة، فلاتر حلال/GLP-1/FODMAP، تخطيط وجبات أسبوعي، وقوائم بقالة تلقائية. مترجمة بثلاث لغات.",
-    f7_t:"تتبع الوزن",f7_p:"سجّل يدوياً أو زامن من Apple Health. مخططات الاتجاه تنعم الضوضاء اليومية لترى التقدم الحقيقي، وليس ذعر وزن الماء.",
-    f8_t:"ودجات الشاشة الرئيسية",f8_p:"حلقة السعرات، تقدم الماكرو، تتبع الماء — ألقِ نظرة على يومك بدون فتح التطبيق. مستخدمو GLP-1 يرون تذكيرات الحقن أيضاً.",
-    mode_label:"لمن هذا التطبيق",mode_title:"ثلاث مجتمعات. تطبيق واحد مدروس.",mode_desc:"كال جاب لا يحاول أن يكون كل شيء للجميع. إنه مبني خصيصاً للأشخاص الذين تجاهلتهم كل التطبيقات الأخرى.",
-    m1_t:"مستخدمو أدوية GLP-1",m1_p:"تتبع الحقن مع تدوير المواقع. تقدير مستوى الدواء. ارتباط الآثار الجانبية بالطعام عبر الذكاء الاصطناعي. أهداف بروتين أولوية لمنع فقدان العضلات. حماية لطيفة من السعرات المنخفضة عند اختفاء الشهية.",m1_b:"أوزمبك · ويغوفي · مونجارو · زيبباوند",
-    m2_t:"المهتمون بالطعام الحلال",m2_p:"كل طعام ممسوح يُظهر حالة التحقق من الحلال. الوصفات موسومة ومفلترة. قوائم المكونات تُفحص تلقائياً. تطبيق تغذية يحترم قيمك أخيراً.",m2_b:"مكونات حلال موثقة",
-    m3_t:"مرضى FODMAP والقولون العصبي",m3_p:"تتبع الأعراض جنباً إلى جنب مع الوجبات. الذكاء الاصطناعي يحدد الأطعمة المسببة بمرور الوقت. الوصفات مصنفة حسب FODMAP. اقتراحات بديلة عملية عندما تسبب خياراتك المعتادة مشاكل.",m3_b:"أطعمة مصنفة FODMAP",
-    price_label:"الأسعار",price_title:"أسعار بسيطة وعادلة",price_desc:"ابدأ بتجربة مجانية. احتفظ بها إذا أعجبتك. ألغِ في أي وقت — بدون حيل أو أنماط مظلمة.",
-    p1_name:"شهري",p1_price:"$5.99",p1_period:"شهرياً",p1_trial:"3 أيام تجربة مجانية",
-    p2_badge:"أفضل قيمة",p2_name:"سنوي",p2_price:"$39.99",p2_period:"سنوياً",p2_save:"~$3.33/شهر — وفّر 44%",p2_trial:"7 أيام تجربة مجانية",
-    p3_name:"مدى الحياة",p3_price:"$89.99",p3_period:"دفعة واحدة",p3_save:"ملكك للأبد",p3_trial:"بدون اشتراك",
-    pf_1:"مسح ذكاء اصطناعي غير محدود",pf_2:"تسجيل صوتي",pf_3:"تخطيط وجبات",pf_4:"رؤى يومية بالذكاء الاصطناعي",pf_5:"كل شيء في الشهري",pf_6:"تقارير أسبوعية بالذكاء الاصطناعي",pf_7:"دعم أولوية",pf_8:"وصول مبكر للميزات",pf_9:"كل شيء مشمول",pf_10:"جميع التحديثات المستقبلية",pf_11:"لا تدفع مرة أخرى",pf_12:"طلبات ميزات ذات أولوية",
+    nav_features:"المميزات",nav_who:"لمن",nav_pricing:"الأسعار",nav_guide:"الدليل",nav_faq:"الأسئلة",nav_download:"تحميل",
+    hero_eyebrow:"تتبّع الطعام والأدوية",hero_title:"تتبّع تغذية <span class=\"accent\">يفهمك حقًا</span>",hero_desc:"لمن يستخدمون أدوية GLP-1، ولمن يأكلون الحلال، ولمن يتّبعون نظامًا منخفض FODMAP. سجّل وجبتك بصورة أو بجملة أو بالباركود، واحتفظ بجرعاتك وأعراضك في مكان واحد، واقرأ أدلة قصيرة كل جملة فيها مرتبطة بمصدرها.",hero_cta:"حمّل من App Store",hero_learn:"← اكتشف المزيد",hero_note:"تنزيل مجاني · بريميوم اختياري · بدون إعلانات",
+    trust_1:"دليل موثّق المصادر",trust_2:"صورة وصوت وباركود",trust_3:"البيانات في الاتحاد الأوروبي",trust_lang:"EN · TR · AR",trust_ads:"بدون إعلانات",
+    how_label:"كيف يعمل",how_title:"سجّل وجبتك في ثوانٍ",how_desc:"بلا نماذج طويلة. استخدم الأسهل لك الآن.",how1_t:"صوّر أو قل أو امسح",how1_p:"التقط صورة، أو قل ما أكلته بالعربية أو الإنجليزية أو التركية، أو امسح الباركود. صف الأطباق المنزلية كما تصفها لصديق.",how2_t:"راجع وصحّح",how2_p:"النتائج تقديرية، لذلك ترى كل عنصر قبل الحفظ. غيّر الحصة أو اسم الطبق، أو استبدله بطعام من USDA FoodData Central.",how3_t:"شاهد يومك",how3_p:"تعرض شاشة اليوم البروتين أولًا ثم الألياف والماء. وإذا كنت تستخدم دواء GLP-1 يظهر يوم جرعتك وكيف تشعر بجانب وجباتك.",
+    feat_label:"المميزات",feat_title:"ماذا في التطبيق",feat_desc:"صُمّم لمن يومه أكثر من مجرد سعرات.",
+    f1_t:"التسجيل بالصورة",f1_p:"صوّر طبقك فيعرض CalJab كل عنصر مع تقدير له. ويمكنك التراجع عن التسجيل خلال 5 ثوانٍ بعد الحفظ.",f2_t:"قلها أو اكتبها",f2_p:"«أكلت بيضتين وشريحة خبز.» جملة واحدة بالعربية أو الإنجليزية أو التركية تكفي.",f3_t:"أهداف تناسبك",f3_p:"البروتين أولًا. وإذا كنت تستخدم دواء GLP-1 فالطاقة حدّ أدنى حتى لا تأكل أقل من اللازم. تتحدّث الأهداف عندما يتغيّر وزنك، أو يمكنك تحديدها بنفسك.",f4_t:"الجرعات والأعراض",f4_p:"سجّل جرعتك على خريطة مواضع الحقن، واحصل على تذكير في يوم الجرعة، واعرف ما تفعله إذا فاتتك جرعة وفق معلومات المنتج الرسمية. وتسجيل قصير لحالتك يبني خريطة أعراضك.",f5_t:"ماسح الباركود",f5_p:"يبحث عن المنتجات المعبّأة في Open Food Facts وUSDA FoodData Central.",f6_t:"خطة وقائمة تسوّق",f6_p:"خطّط لأسبوعك بوصفات تناسب أوضاعك. تمتلئ قائمة التسوّق من خطتك ويمكنك مشاركتها.",f7_t:"الوزن",f7_p:"سجّل وزنك وشاهد كيف يتغيّر أسبوعًا بعد أسبوع. ويمكن حفظ قياساتك في تطبيق الصحة من Apple.",f8_t:"أدوات الشاشة الرئيسية",f8_p:"يومك ووجبتك التالية والماء ويوم جرعتك، دون فتح التطبيق.",
+    mode_label:"لمن هذا التطبيق",mode_title:"ثلاثة أوضاع. اختر ما يناسبك أو لا شيء.",mode_desc:"الأوضاع اختيارية ويمكنك تغييرها لاحقًا. ومن دونها يكون CalJab متتبّع طعام بسيطًا.",
+    m1_t:"أدوية GLP-1",m1_p:"سجل جرعات مع خريطة لمواضع الحقن واقتراح للموضع التالي، وتذكير في يوم الجرعة، وإرشادات الجرعة الفائتة وفق معلومات المنتج الرسمية، ومستوى تقديري للدواء. البروتين أولًا وللطاقة حدّ أدنى.",m1_b:"أوزمبيك · ويغوفي · مونجارو · وغيرها",m2_t:"الحلال",m2_p:"تستبعد خطة الوجبات الوصفات غير الحلال، ويستبعد الاختيار من القائمة الأطباق غير الحلال. قد تظهر ملاحظة حلال في نتائج الصور وهي تقديرية. لا يمنح CalJab شهادات حلال للمنتجات، ويشرح الدليل كيف تتحقق من الشهادة.",m2_b:"وضع الحلال",m3_t:"منخفض FODMAP",m3_p:"اختر المرحلة التي أنت فيها: الاستبعاد أو إعادة الإدخال أو التخصيص. تستبعد خطة الوجبات والاختيار من القائمة الخيارات عالية FODMAP، ويُظهر بريميوم الروابط بين وجباتك وشعورك.",m3_b:"وضع منخفض FODMAP",
+    price_label:"الأسعار",price_title:"البداية مجانية. والمزيد في بريميوم.",price_desc:"تتبّع الجرعات والتذكيرات ومعلومات السلامة مجانية دائمًا. ويضيف بريميوم التسجيل بالذكاء الاصطناعي بلا حدود وأنماطًا أعمق.",
+    p1_name:"ابدأ من هنا",p1_price:"مجاني",p1_period:"بلا حدّ زمني",p1_tag:"بضع تسجيلات بالذكاء الاصطناعي للتجربة",p2_name:"للمزيد",p2_price:"بريميوم",p2_period:"شهري أو سنوي أو مدى الحياة. تظهر الأسعار بعملتك في App Store.",p2_tag:"ألغِ في أي وقت من App Store",
+    pf_1:"التسجيل اليدوي والبحث والباركود",pf_2:"تتبّع الجرعات والتذكيرات",pf_3:"خريطة الأعراض ومعلومات السلامة",pf_4:"خطة الوجبات والوصفات وقائمة التسوّق",pf_5:"الدليل",pf_6:"صور وجبات بلا حدود",pf_7:"تسجيل صوتي وبجملة واحدة بلا حدود",pf_8:"البحث عن أي طعام بأي لغة بالذكاء الاصطناعي",pf_9:"مسح القائمة: ثلاثة اختيارات من أي قائمة طعام",pf_10:"أنماط الأعراض",pf_11:"الجرعة والوزن أسبوعًا بأسبوع",pf_12:"تقرير للطبيب بصيغة PDF",
     guide_label:"الدليل",guide_title:"قراءات قصيرة مع مصادرها",guide_desc:"أعدّها فريق CalJab من نشرات الأدوية والإرشادات الصحية الرسمية والأبحاث المحكّمة. كل جملة مرتبطة بمصدرها، ولا شيء منها يغني عن نصيحة الطبيب.",guide_all:"كل مقالات الدليل",
     g1_t:"البروتين عند قلة الشهية",g1_p:"لماذا البروتين مهم، وكم تحتاج، ومن أين تحصل عليه عندما تأكل أقل، وما الذي يحمي العضلات أيضًا.",g1_m:"3 د للقراءة",
     g2_t:"الغثيان والقيء",g2_p:"لماذا يحدث، وما الذي قد يساعد، وماذا تفعل إذا تقيأت، ومتى تراجع الطبيب.",g2_m:"3 د للقراءة",
     g3_t:"مراحل FODMAP الثلاث",g3_p:"ماذا تعني مراحل الاستبعاد وإعادة الإدخال والتخصيص، وكم تستغرق، وما الذي يجب معرفته قبل البدء.",g3_m:"3 د للقراءة",
     g4_t:"قراءة الملصق",g4_p:"كيف تقرأ قائمة المكونات، وكيف تتحقق من شهادة الحلال، وكيف تكتشف مكونات FODMAP.",g4_m:"3 د للقراءة",
     faq_label:"الأسئلة الشائعة",faq_title:"أسئلة شائعة",
-    fq1:"هل كال جاب تطبيق طبي؟",fa1:"لا. كال جاب أداة لتتبع التغذية — ليس جهازاً طبياً. لا يشخص أو يعالج أو يوصي بتغيير الأدوية. استشر دائماً مقدم الرعاية الصحية حول خطة علاجك.",
-    fq2:"ما مدى دقة المسح بالذكاء الاصطناعي؟",fa2:"ذكاء كال جاب الاصطناعي يتعرف على الأطعمة بثقة عالية، ثم يقارن كل نتيجة بقاعدة بيانات USDA. يمكنك إضافة تلميحات لدقة أفضل وتعديل أي نتيجة بالبحث المباشر.",
-    fq3:"ما اللغات المدعومة؟",fa3:"ترجمة كاملة بالإنجليزية والتركية والعربية — بما في ذلك جميع الوصفات الـ250+ وأسماء المكونات ورؤى الذكاء الاصطناعي والتسجيل الصوتي.",
-    fq4:"هل يمكنني استخدامه بدون GLP-1/حلال/FODMAP؟",fa4:"بالتأكيد. كال جاب يعمل بشكل رائع كمتتبع سعرات عام. الأوضاع المتخصصة هي مفاتيح اختيارية يمكنك تشغيلها أو إيقافها في أي وقت.",
-    fq5:"هل بياناتي خاصة؟",fa5:"نعم. البيانات مخزنة على خوادم الاتحاد الأوروبي (فرانكفورت). لا نبيع بياناتك أبداً، لا نعرض إعلانات، لا نشارك مع أطراف ثالثة. لا نستخدم أدوات تحليلات أو متتبعات إعلانية.",
-    fq6:"ماذا في الباقة المجانية؟",fa6:"3 مسحات بالذكاء الاصطناعي، تسجيل يدوي غير محدود، مسح باركود، وتتبع الماء. بريميوم يفتح المسح غير المحدود والتسجيل الصوتي وتخطيط الوجبات ورؤى الذكاء الاصطناعي.",
-    cta_title:"مستعد لتتبع تغذية يناسب حياتك؟",cta_desc:"حمّل كال جاب مجاناً. جرّب بريميوم لمدة 7 أيام. ألغِ في أي وقت.",cta_btn:"حمّل من App Store",
-    foot_privacy:"سياسة الخصوصية",foot_terms:"شروط الاستخدام",foot_contact:"اتصل بنا",
-    foot_disc:"كال جاب ليس نصيحة طبية. استشر دائماً مقدم الرعاية الصحية. تقديرات التغذية بالذكاء الاصطناعي تقريبية."
+    fq1:"هل CalJab تطبيق طبي؟",fa1:"لا. CalJab أداة تتبّع وليس جهازًا طبيًا. لا يشخّص ولا يعالج ولا يقترح جرعات، بل يسجّل الجرعة التي حدّدها طبيبك. تحدّث مع طبيبك بشأن علاجك.",fq2:"ما مدى دقة التسجيل بالصورة؟",fa2:"نتائج الصور والجمل تقديرية. ترى كل عنصر قبل الحفظ ويمكنك تغيير حصته أو اسمه، أو استبداله بطعام من USDA FoodData Central.",fq3:"ما اللغات المتاحة؟",fa3:"التطبيق والدليل والتسجيل الصوتي متاحة بالعربية والإنجليزية والتركية، وتُعرض العربية من اليمين إلى اليسار.",fq4:"هل يمكنني استخدامه دون GLP-1 أو الحلال أو FODMAP؟",fa4:"نعم. الأوضاع اختيارية ويمكنك تشغيلها أو إيقافها لاحقًا من التطبيق.",fq5:"هل بياناتي خاصة؟",fa5:"تُخزَّن بياناتك في الاتحاد الأوروبي (فرانكفورت). لا تُستخدم بياناتك الصحية إلا بموافقتك، وإذا سحبت الموافقة تُحذف سجلاتك الصحية وسجلات الطعام وصور الوجبات، ويمكنك تنزيلها أولًا. في ميزات الذكاء الاصطناعي تُرسَل إلى OpenAI الصورة أو الجملة فقط، دون اسمك أو أوضاعك أو أدويتك أو جرعاتك أو وزنك. لا إعلانات ولا أدوات تحليل من جهات خارجية.",fq6:"ماذا يتضمّن الإصدار المجاني؟",fa6:"مجانًا: التسجيل اليدوي والبحث والباركود، وتتبّع الجرعات والتذكيرات، وخريطة الأعراض، ومعلومات السلامة، وخطة الوجبات والوصفات وقائمة التسوّق، والدليل. ويضيف بريميوم التسجيل بالصور والصوت والجمل بلا حدود، ومسح القوائم، وأنماط الأعراض، والجرعة والوزن أسبوعًا بأسبوع، وتقرير الطبيب.",fq7:"من يمكنه استخدام CalJab؟",fa7:"البالغون من عمر 18 عامًا فما فوق.",
+    cta_title:"جرّبه مع وجبتك القادمة",cta_desc:"تنزيل مجاني. بريميوم اختياري ويمكنك إلغاؤه في أي وقت من App Store.",cta_btn:"حمّل من App Store",
+    foot_privacy:"سياسة الخصوصية",foot_terms:"شروط الاستخدام",foot_contact:"اتصل بنا",foot_disc:"CalJab ليس جهازًا طبيًا ولا يقدّم نصيحة طبية. تقديرات الطعام تقريبية. أوزمبيك وويغوفي ومونجارو وأسماء الأدوية الأخرى علامات تجارية لأصحابها."
   }
 };
 

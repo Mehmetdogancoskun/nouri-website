@@ -3,11 +3,11 @@
 
 ## What it does
 - Food logging: photo, one sentence or voice, barcode, search, and picks from a restaurant menu. Daily targets put protein first; for GLP-1 users energy is a lower limit, not a target to hit.
-- GLP-1 medicines: dose log with an injection site map and next-site suggestion, dose reminders, missed-dose guidance taken from each medicine's leaflet, and an estimated medicine level built from leaflet values (an estimate, not a measurement).
+- GLP-1 medicines: dose log with an injection site map and next-site suggestion, dose reminders, missed-dose guidance from official product information, and an estimated medicine level built from leaflet values (an estimate, not a measurement).
 - Symptoms: a short daily check-in and a symptom map.
 - Supplements and other medicines with reminders. The user enters the amount; the app does not suggest amounts.
-- Halal mode leaves out dishes that are not halal when it picks from a menu. It does not certify products as halal.
-- Low FODMAP mode shows the elimination, reintroduction and personalization steps, and menu picks leave out dishes estimated to be high in FODMAPs.
+- Halal mode leaves out recipes and dishes that are not halal in meal plans and menu picks; a halal note on photo results is an estimate. CalJab does not certify products as halal.
+- Low FODMAP mode lets the user mark their step (elimination, reintroduction or personalization), and meal plans and menu picks leave out high FODMAP choices.
 - Meal plans, recipes and a shopping list.
 - Weight log, and a doctor report (PDF) with doses, weight, symptoms and eating.
 - Guide: short articles where every sentence links to its source (see below).
@@ -19,7 +19,7 @@
 ## Privacy
 - Health data is used only with the user's consent, asked at sign-up. Withdrawing it in the app deletes health and food logs and meal photos; a download is offered first.
 - Data is stored with Supabase in the EU (Frankfurt).
-- AI features receive only the photo or the sentence, not the user's name, mode, medicine, dose or weight.
+- AI features receive only the photo or the sentence, not the user's name, modes, medicines, doses or weight.
 - For adults 18 and over.
 
 ## Technical
