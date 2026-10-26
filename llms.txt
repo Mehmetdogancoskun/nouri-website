@@ -11,21 +11,23 @@
 - Meal plans, recipes and a shopping list.
 - Weight log, and a doctor report (PDF) with doses, weight, symptoms and eating.
 - Guide: short articles where every sentence links to its source (see below).
+- Ask (Premium): an assistant for short questions about eating, the medicine routine, symptoms and using the app. Answers come from the Guide articles and the user's own records; for dose decisions and for signs of an emergency it shows a fixed card instead of an answer.
 
 ## Free and Premium
 - Free: manual logging, dose tracking and reminders, the symptom map, safety information, plans and the Guide.
-- Premium (monthly, yearly or lifetime; current prices are shown in the App Store): unlimited meal photos, voice and one-sentence logging, AI lookup for any food, menu scanning, symptom patterns, dose and weight by week, and the doctor report.
+- Premium (monthly, yearly or lifetime; current prices are shown in the App Store): Ask (up to 30 questions a day), unlimited meal photos, voice and one-sentence logging, AI lookup for any food, menu scanning, symptom patterns, dose and weight by week, and the doctor report.
 
 ## Privacy
 - Health data is used only with the user's consent, asked at sign-up. Withdrawing it in the app deletes health and food logs and meal photos; a download is offered first.
 - Data is stored with Supabase in the EU (Frankfurt).
-- AI features receive only the photo or the sentence, not the user's name, modes, medicines, doses or weight.
+- AI logging receives only the photo or the sentence, not the user's name, modes, medicines, doses or weight.
+- Ask has its own consent. With each question it sends the parts of the user's records they leave on (such as medicine, dose and stage, modes, goals, today's meals and symptom days), never their name, email, age, sex, photos or Apple Health data. Chats stay on the phone.
 - For adults 18 and over.
 
 ## Technical
 - Swift and SwiftUI, iOS 17 and later
 - Supabase (EU) for accounts and data
-- OpenAI models for AI logging
+- OpenAI models for AI logging and Ask
 - StoreKit 2 for subscriptions
 
 ## Guide

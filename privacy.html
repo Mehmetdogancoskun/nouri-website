@@ -45,14 +45,14 @@ footer a{color:var(--saffron-text);text-decoration:none;margin:0 10px;display:in
 <nav><a class="brand" href="/">CalJab</a><div class="langs"><a href="privacy.html" hreflang="en" lang="en" aria-current="true">English</a><a href="privacy-tr.html" hreflang="tr" lang="tr">Türkçe</a><a href="privacy-ar.html" hreflang="ar" lang="ar">العربية</a></div></nav>
 <main class="container">
 <h1>Privacy Policy</h1>
-<p class="date">Last updated: October 20, 2026</p>
+<p class="date">Last updated: October 23, 2026</p>
 <p>What CalJab collects and why, who it is shared with, and your rights.</p>
 <h2>In short</h2>
 <p>CalJab is developed by Mehmet Doğan Coşkun, who is responsible for your data ("we", the data controller).</p>
 <ul>
 <li>Your data is never sold and never used for advertising. The app has no ads and no third-party tracking tools.</li>
 <li>Your health and nutrition records are processed only with your explicit consent and are stored on servers in Germany, visible only to you.</li>
-<li>AI features work only with a separate permission. Only the photo or sentence you send goes to OpenAI.</li>
+<li>AI logging works only with a separate permission and sends OpenAI only the photo or sentence you send. Ask, the assistant in Premium, has its own permission and sends your question with the parts of your records you leave on.</li>
 <li>You can download your data from the app at any time, or delete it together with your account.</li>
 <li>Questions: support@caljab.app.</li>
 </ul>
@@ -96,6 +96,11 @@ footer a{color:var(--saffron-text);text-decoration:none;margin:0 10px;display:in
 <td>Crash and hang reports, app and iOS version, usage events (such as setup steps), AI usage count, server security logs (IP address)</td>
 <td>The app and our server, automatically</td>
 </tr>
+<tr>
+<td>Ask</td>
+<td>Your questions to Ask and its answers (kept only on your phone), a chat you choose to report to us, a usage record for each question without its text</td>
+<td>You; the app and our server</td>
+</tr>
 </tbody>
 </table></div>
 <p>Steps and active energy that we read from Apple Health stay on your phone. We never use Apple Health data for advertising and never share it. We do not collect the advertising identifier (IDFA).</p>
@@ -104,6 +109,7 @@ footer a{color:var(--saffron-text);text-decoration:none;margin:0 10px;display:in
 <li><strong>Providing the service</strong> (account, sync, plans, lists, subscription): our contract with you (GDPR Art. 6(1)(b); KVKK Art. 5(2)(c)).</li>
 <li><strong>Processing your health and nutrition records</strong> (logging, goals, summaries, reminders, doctor report): your explicit consent (GDPR Art. 9(2)(a); KVKK Art. 6(2)). Your halal preference may reveal a belief, so it is covered by the same consent.</li>
 <li><strong>AI logging:</strong> your separate explicit consent.</li>
+<li><strong>Ask:</strong> your separate explicit consent. A chat you report is sent under the same consent when you confirm sending it.</li>
 <li><strong>Fixing bugs, improving the app and preventing abuse</strong> (crash reports, usage events, security logs): our legitimate interest (GDPR Art. 6(1)(f); KVKK Art. 5(2)(f)). This data contains no health information.</li>
 <li><strong>Legal obligations:</strong> where required.</li>
 </ul>
@@ -117,6 +123,20 @@ footer a{color:var(--saffron-text);text-decoration:none;margin:0 10px;display:in
 <li>When you log by voice, Apple's speech recognition turns your speech into text; only the text, never the audio, goes to OpenAI.</li>
 <li>These features ask for a separate permission the first time you use them. You can turn it off in Me &gt; Privacy; logging by hand, by barcode and from lists keeps working.</li>
 <li>AI results are estimates and can be wrong.</li>
+</ul>
+<h2 id="assistant">Ask: what is sent and what is not</h2>
+<p>Ask is the assistant in the Assistant tab. It is part of Premium; free accounts can try it with a limited number of questions. It answers short questions about eating, your medicine routine, symptoms and how to use CalJab, using CalJab's sourced Guide articles. Your question goes through our server to OpenAI (USA), and the answer comes back to your phone.</p>
+<ul>
+<li><strong>Sent with each question:</strong> the question, the last five questions and answers of that chat, the app language, the date and time on your phone, and the parts of your records that are on in "What does Ask know?": your medicine, dose and stage (for example Ozempic 0.5 mg, dose increase), your modes and foods you skip, your goals, today's meals (name and protein), on how many of the last 7 days you logged each symptom, symptom patterns (Premium) and your weight trend (off unless you turn it on).</li>
+<li><strong>Never sent:</strong> your name, email, account ID, age, sex, photos, Apple Health data, and the questions and notes in your doctor report.</li>
+<li>The "Knows" line under each question shows what was sent. You can turn off any part in "What does Ask know?"; this does not change your records in the app.</li>
+<li>OpenAI does not use this content to train its models and keeps it for at most 30 days for abuse monitoring.</li>
+<li>Your chats are kept only on your phone. They are not in iCloud backups, do not move to a new phone and are deleted when you sign out. Our server does not keep the text of your questions or of the answers.</li>
+<li>For each question our server keeps a usage record without any text: the date, the kind of answer shown, how much text was processed and the cost. It is used for question limits, costs and preventing abuse, kept for 12 months and included in your data download.</li>
+<li>If you tap "Report wrong information" and confirm, the questions and answers of that chat are sent to us so that we can fix the mistake. Nothing else from your records is sent. We keep a report for 12 months.</li>
+<li>When you ask by voice, Apple's speech recognition turns your speech into text, on your phone where the phone supports it; only the text is sent.</li>
+<li>Ask asks for its own permission the first time you open it. You can turn it off in Me &gt; Privacy &gt; Permissions and data; after that nothing is sent, and the usage records and reports above are deleted. They are also deleted if you withdraw your health consent.</li>
+<li>Ask gives general information, not medical advice. It does not suggest doses or dose changes, and when it recognizes signs of an emergency it shows your local emergency number instead of an answer. Answers can be wrong.</li>
 </ul>
 <h2>Services we share with and where data is stored</h2>
 <div class="table-wrap"><table>
@@ -137,8 +157,8 @@ footer a{color:var(--saffron-text);text-decoration:none;margin:0 10px;display:in
 </tr>
 <tr>
 <td>OpenAI</td>
-<td>AI logging, only with your permission</td>
-<td>The content you send</td>
+<td>AI logging and Ask, only with your permission</td>
+<td>The content you send; for Ask, also the parts of your records you leave on</td>
 <td>USA</td>
 </tr>
 <tr>
@@ -166,7 +186,7 @@ footer a{color:var(--saffron-text);text-decoration:none;margin:0 10px;display:in
 <ul>
 <li>Your data is kept while your account is open. If you delete an entry, its photo is deleted with it.</li>
 <li>You can delete your account in Me &gt; Privacy &gt; Permissions and data. Your data is deleted immediately and drops out of daily backups within 7 days. If you withdraw your health consent, your health and nutrition records are deleted in the same way.</li>
-<li>Crash reports are kept for 90 days, usage events for 12 months and server security logs for at most 7 days. Content sent with AI stays with OpenAI for at most 30 days.</li>
+<li>Crash reports are kept for 90 days, usage events for 12 months and server security logs for at most 7 days. Content sent with AI stays with OpenAI for at most 30 days. Ask usage records and reported chats are kept for 12 months; your Ask chats stay only on your phone.</li>
 <li>Your rights: to access, correct and delete your data, to restrict or object to processing, to data portability (by downloading it in the app), and to withdraw your consent at any time. Withdrawing consent does not affect processing done before.</li>
 <li>To use them, write to support@caljab.app; we reply within 30 days. You may also complain to the data protection authority in your country.</li>
 <li>Users in Turkey also have the <a href="aydinlatma.html">KVKK information notice</a> (in Turkish).</li>
